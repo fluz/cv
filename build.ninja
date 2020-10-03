@@ -4,13 +4,13 @@ rule cutreadme
   command = ./tools/cutreadme $in $out
 
 rule mdhtml
-  command = pandoc -f markdown -t html -V "title:Fernando Luz" -s --template pandoc-bootstrap/template.html --css pandoc-bootstrap/template.css -o $out $in
+  command = pandoc -f markdown -t html -V "pagetitle:Fernando Luz's Resume" -s --css templates/default.css -o $out $in
 
 rule mdtxt
-  command = pandoc -f markdown -t plain -V "title:Fernando Luz" -s -o $out $in
+  command = pandoc -f markdown -t plain -s $in -o $out 
 
 rule cvrender
-  command = ./tools/jinja2-render -y fluz.yml -o $out $in
+  command = ./tools/jinja2-render -y fluz.yml $in -o $out 
 
 rule cdpdflatex
   command = ./tools/cddo $in $$PWD/tools/latexer
@@ -21,7 +21,16 @@ rule cdpdflatex
 build DevResume/index.html: cvrender DevResume/index.html.jinda | fluz.yml ./tools/jinda2-render
 
 # ceevee view:
-build ceevee/cv.html: cvrender  ceevee/cv.html.jinja | fluz.yml ./tools/jinja2-render
+build ceevee/cv.html: cvrender ceevee/cv.html.jinja | fluz.yml ./tools/jinja2-render
+
+# markdown view:
+build markdown/cv.md: cvrender markdown/cv.md.jinja | fluz.yml ./tools/jinja2-render
+
+# markdown-html view:
+build markdown/cv.html: mdhtml markdown/cv.md | pandoc-bootstrap/template.css pandoc-bootstrap/template.html
+
+# markdown-txt view:
+build markdown/cv.txt: mdtxt markdown/cv.md
 
 // # resumecls view:
 // build resumecls/cv.tex: cvrender   resumecls/cv.tex.jinja | fluz.yml ./tools/jinja2-render
@@ -39,14 +48,6 @@ build ceevee/cv.html: cvrender  ceevee/cv.html.jinja | fluz.yml ./tools/jinja2-r
 // build orbit/cv.html: cvrender   orbit/cv.html.jinja | fluz.yml ./tools/jinja2-render
 
 
-// # markdown view:
-// build markdown/cv.md: cvrender  markdown/cv.md.jinja | fluz.yml ./tools/jinja2-render
-
-// # markdown-html view:
-// build markdown/cv.html: mdhtml markdown/cv.md | pandoc-bootstrap/template.css pandoc-bootstrap/template.html
-
-// # markdown-txt view:
-// build markdown/cv.txt: mdtxt markdown/cv.md
 
 // # index page:
 // build _readme.md: cutreadme README.md | ./tools/cutreadme
