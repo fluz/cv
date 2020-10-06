@@ -1,7 +1,7 @@
 version: 2
 
 jobs:
-  test:
+  cv-builds:
     docker:
       - image: python:3.7
     steps:
@@ -35,8 +35,36 @@ jobs:
       - run:
           name: Build Markdown text view
           command: pandoc -f markdown -t plain -s -o dist/cv_fernando_luz_md.txt dist/cv_fernando_luz.md
+      - persist_to_workspace:
+          root: ./
+          paths: dist
+  cv-deploy:
+    docker:
+      - image: node:8.10.0
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Install and configure dependencies
+          command: |
+            npm install -g --silent gh-pages@2.0.1
+            git config user.email "ci-build@fluz.net"
+            git config user.name "ci-build"
+      - run:
+          name: Deploy CVs to gh-pages branch
+          command: gh-pages --dist ./dist 
+        
+
+          
 workflows:
   version: 2
   build:
     jobs:
-      - test 
+      - cv-builds
+      - cv-deploy:
+        requires:
+          - cv-builds
+        filter:
+          branches:
+            only: Circle-Ci
