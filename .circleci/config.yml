@@ -71,4 +71,4 @@ workflows:
             - cv-builds
           filters:
             branches:
-              only: Circle-Ci
+              only: Circle_Ci
