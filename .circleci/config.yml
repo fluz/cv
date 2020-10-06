@@ -16,10 +16,11 @@ jobs:
           name: Setup output environment
           command: |
             mkdir dist
-            cp -r assets/css dist 
-            cp -r assets/fontawesome dist
-            cp -r assets/images dist
-            cp -r assets/js dist
+            mkdir dist/assets
+            cp -r assets/css dist/assets 
+            cp -r assets/fontawesome dist/assets
+            cp -r assets/images dist/assets
+            cp -r assets/js dist/assets
       - run:
           name: Build DevResume CV view
           command: python ./tools/jinja2-render -y fluz.yml -o dist/cv.html DevResume/index.html.jinja
@@ -71,4 +72,4 @@ workflows:
             - cv-builds
           filters:
             branches:
-              only: Circle_Ci
+              only: master
