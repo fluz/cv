@@ -7,11 +7,18 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install dependencies
+          name: Install python dependencies
           command: pip install -r requirements.txt
       - run:
-          name: Test
-          command: echo "Running test"
+          name: Setup output environment
+          command: |
+            mkdir dist
+            cp -r assets/css dist 
+            cp -r assets/fontawesome dist
+            cp -r assets/images dist
+      - run:
+          name: Build DevResume CV view
+          command: python ./tools/jinja2-render -y fluz.yml -o dist/cv.html DevResume/index.html.jinja
 workflows:
   version: 2
   build:
