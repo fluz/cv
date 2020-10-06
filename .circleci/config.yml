@@ -19,9 +19,22 @@ jobs:
             cp -r assets/css dist 
             cp -r assets/fontawesome dist
             cp -r assets/images dist
+            cp -r assets/js dist
       - run:
           name: Build DevResume CV view
           command: python ./tools/jinja2-render -y fluz.yml -o dist/cv.html DevResume/index.html.jinja
+      - run:
+          name: Build CeeVee CV view
+          command: python ./tools/jinja2-render -y fluz.yml -o dist/cv_ceevee.html ceevee/index.html.jinja
+      - run:
+          name: Build Markdown view
+          command: python ./tools/jinja2-render -y fluz.yml -o dist/cv_fernando_luz.md markdown/cv.md.jinja
+      - run:
+          name: Build Markdown HTML view
+          command: pandoc -f markdown -t html -V "pagetitle:Fernando Luz's Resume" -s --css templates/default.css -o dist/cv_fernando_luz_md.html dist/cv_fernando_luz.md
+      - run:
+          name: Build Markdown text view
+          command: pandoc -f markdown -t plain -s -o dist/cv_fernando_luz_md.txt dist/cv_fernando_luz.md
 workflows:
   version: 2
   build:
