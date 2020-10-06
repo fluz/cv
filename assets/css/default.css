@@ -26,7 +26,7 @@ e. Others
 /* a. Webfonts and Icon fonts
  ------------------------------------------------------------------ */
 
-@import url("fonts.css");
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 @import url("fontello/css/fontello.css");
 
 /* ------------------------------------------------------------------
@@ -86,7 +86,9 @@ pre {
    word-wrap: break-word;
 }
 
-blockquote, q { quotes: &#8220 &#8220; }
+blockquote, q { 
+   quotes: \&#8220 \&#8220; 
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -142,8 +144,8 @@ html {
 
 body {
    background: #fff;
-   font-family: 'opensans-regular', sans-serif;
-   font-weight: normal;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 400;
    font-size: 15px;
    line-height: 30px;
 	color: #838C95;
@@ -158,8 +160,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
    color: #313131;
-	font-family: 'opensans-bold', sans-serif;
-   font-weight: normal;
+	font-family: 'Open Sans', sans-serif;
+   font-weight: 700;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 h1 { font-size: 38px; line-height: 42px; margin-bottom: 12px; letter-spacing: -1px; }
@@ -168,19 +170,19 @@ h3 { font-size: 22px; line-height: 30px; margin-bottom: 12px; }
 h4 { font-size: 20px; line-height: 30px; margin-bottom: 6px; }
 h5 { font-size: 18px; line-height: 30px; }
 h6 { font-size: 14px; line-height: 30px; }
-.subheader { }
 
 p { margin: 0 0 20px 0; }
 p img { margin: 0; }
 p.lead {
-   font: 19px/36px 'opensans-light', sans-serif;
+   font: 19px/36px 'Open Sans', sans-serif;
+   font-weight: 300;
    margin-bottom: 18px;
 }
 
 /* for 'em' and 'strong' tags, font-size and line-height should be same with
 the body tag due to rendering problems in some browsers */
-em { font: 15px/30px 'opensans-italic', sans-serif; }
-strong, b { font: 15px/30px 'opensans-bold', sans-serif; }
+em { font: 15px/30px 'Open Sans', sans-serif; font-weight: 400; font-style: italic;}
+strong, b { font: 15px/30px 'Open Sans', sans-serif; font-weight: 700; }
 small { font-size: 11px; line-height: inherit; }
 
 /*	Blockquotes */
@@ -202,7 +204,9 @@ blockquote:before {
 	left: 0;
 }
 blockquote p {
-   font-family: 'librebaskerville-italic', serif;
+   font-family: 'Libre Baskerville', serif;
+   font-weight: 400;
+   font-style: italic;
    padding: 0;
    font-size: 18px;
    line-height: 36px;
@@ -258,7 +262,8 @@ blockquote cite a:visited { color: #8B9798; border: none }
 
 /* Abbreviations */
 abbr {
-   font-family: 'opensans-bold', sans-serif;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 700;
 	font-variant: small-caps;
 	text-transform: lowercase;
    letter-spacing: .5px;
@@ -272,7 +277,8 @@ abbr:hover { cursor: help; }
 	margin: 0;
 	padding: 14px 6px 0 0;
 	font-size: 84px;
-	font-family: /* Copperplate */ 'opensans-bold', sans-serif;
+   font-family: /* Copperplate */ 'Open Sans', sans-serif;
+   font-weight: 700;
    line-height: 60px;
 	text-indent: 0;
 	background: transparent;
@@ -312,8 +318,6 @@ ol ol, ol ul { margin: 6px 0 6px 30px; }
 ul ul li, ul ol li,
 ol ol li, ol ul li { margin-bottom: 6px; }
 li { line-height: 18px; margin-bottom: 12px; }
-ul.large li { }
-li p { }
 
 /* ---------------------------------------------------------------------
 /*  Stats Tab Markup
@@ -343,7 +347,8 @@ li p { }
 .stats-tabs li a {
 	display: inline-block;
 	font-size: 22px;
-	font-family: 'opensans-bold', sans-serif;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 700;
    border: none;
    color: #313131;
 }
@@ -354,7 +359,7 @@ li p { }
 	display: block;
 	margin: 6px 0 0 0;
 	font-size: 13px;
-	font-family: 'opensans-regular', sans-serif;
+	font-family: 'Open Sans', sans-serif;
    color: #8B9798;
 }
 
@@ -431,7 +436,8 @@ dd { margin: 0 0 0 20px; }
    padding: 0;
 }
 .pagination .page-numbers {
-   font: 15px/18px 'opensans-bold', sans-serif;
+   font: 15px/18px 'Open Sans', sans-serif;
+   font-weight: 700;
    display: inline-block;
    padding: 6px 10px;
    margin-right: 3px;
@@ -464,7 +470,6 @@ dd { margin: 0 0 0 20px; }
    background-color: #E6E8EB;
 	color: #A9ADB2;
 }
-.pagination .prev, .pagination .next {}
 
 /*  5. Images  --------------------------------------------------------- */
 
@@ -483,7 +488,8 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-   font: 16px/30px 'opensans-bold', sans-serif;
+   font: 16px/30px 'Open Sans', sans-serif;
+   font-weight: 700;
    background: #11ABB0;
    display: inline-block;
 	text-decoration: none;
@@ -559,7 +565,6 @@ select {
    margin: 0 0 24px 0;
    border: 0;
    outline: none;
-   vertical-align: middle;
    min-width: 225px;
 	max-width: 100%;
    font-size: 15px;
@@ -585,7 +590,8 @@ textarea { min-height: 220px; }
 
 label,
 legend {
-   font: 16px/24px 'opensans-bold', sans-serif;
+   font: 16px/24px 'Open Sans', sans-serif;
+   font-weight: 700;
 	margin: 12px 0;
    color: #3d4145;
    display: block;
@@ -593,7 +599,7 @@ legend {
 label span,
 legend span {
 	color: #8B9798;
-   font: 14px/24px 'opensans-regular', sans-serif;
+   font: 14px/24px 'Open Sans', sans-serif;
 }
 
 input[type="checkbox"],
