@@ -68,7 +68,7 @@ workflows:
       - cv-builds
       - cv-deploy:
           requires:
-            - cv-build
+            - cv-builds
           filters:
             branches:
               only: Circle-Ci
