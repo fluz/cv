@@ -36,7 +36,7 @@ jobs:
           name: Build Markdown text view
           command: pandoc -f markdown -t plain -s -o dist/cv_fernando_luz_md.txt dist/cv_fernando_luz.md
       - persist_to_workspace:
-          root: ./
+          root: .
           paths: dist
   cv-deploy:
     docker:
@@ -44,27 +44,31 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: ./
+          at: .
+      - run:
+          name: Disable jekyll builds
+          command: touch dist/.nojekyll
       - run:
           name: Install and configure dependencies
           command: |
             npm install -g --silent gh-pages@2.0.1
             git config user.email "ci-build@fluz.net"
             git config user.name "ci-build"
+      - add_ssh_keys:
+          fingerprints:
+            - "67:10:37:41:ef:79:6b:2c:73:bf:b7:31:1f:2b:e6:bb"
       - run:
           name: Deploy CVs to gh-pages branch
-          command: gh-pages --dist ./dist 
-        
+          command: gh-pages --dotfiles --message "[skip ci] CV Updates" --dist ./dist 
 
-          
 workflows:
   version: 2
   build:
     jobs:
       - cv-builds
       - cv-deploy:
-        requires:
-          - cv-builds
-        filter:
-          branches:
-            only: Circle-Ci
+          requires:
+            - cv-build
+          filters:
+            branches:
+              only: Circle-Ci
