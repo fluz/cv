@@ -7,6 +7,26 @@
 
 This template provide another view for my cv, with more information about my projects and in a clean view.
 
+## Generating this view
+
+First, in the project root, I prepare the dist folder
+
+```bash
+rm -rf dist
+mkdir dist
+mkdir dist/assets
+cp -r assets/css dist/assets
+cp -r assets/fontawesome dist/assets
+cp -r assets/images dist/assets
+cp -r assets/js dist/assets
+```
+
+Then, I generate the DevResume view
+
+```bash
+python ./tools/jinja2-render -y fluz.yml -o dist/index.html DevResume/index.html.jinja
+```
+
 ## About this template
 
 DevResume is a **free Bootstrap 4 resume/CV template** made for software developers. Built on **Bootstrap 4 and SASS**, it's quick and easy to change the template styling.
