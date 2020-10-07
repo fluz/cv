@@ -38,7 +38,8 @@ jobs:
           command: pandoc -f markdown -t plain -s -o dist/cv_fernando_luz_md.txt dist/cv_fernando_luz.md
       - persist_to_workspace:
           root: .
-          paths: dist
+          paths: 
+            - dist
   cv-deploy:
     docker:
       - image: node:8.10.0

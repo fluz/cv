@@ -1,9 +1,3 @@
-/.ninja_deps
-/.ninja_log
-/index.html
-cv.html
-cv.tex
-_*
 *.log
 *.pdf
 *.aux
@@ -11,6 +5,4 @@ _*
 *.out
 *.snm
 *.toc
-/markdown/cv.md
-/markdown/cv.txt
-/result
+dist

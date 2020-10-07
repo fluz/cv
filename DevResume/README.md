@@ -5,7 +5,7 @@
 
 ## Introduction
 
-This template provide another view for my cv, with more information about my projects and in a clean view.
+This template provide DevResume view for my cv, in a clean schema.
 
 ## Generating this view
 
