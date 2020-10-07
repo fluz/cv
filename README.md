@@ -1,4 +1,4 @@
-<!-- [![Run Status](https://api.shippable.com/projects/577f06e63be4f4faa56c2d2e/badge?branch=master)](https://app.shippable.com/projects/577f06e63be4f4faa56c2d2e) -->
+[![FLUZ](https://img.shields.io/circleci/build/github/fluz/cv?style=plastic&token=83c15bcb622cc21f3aaee690ade9c8cacc3cb466)](https://app.circleci.com/pipelines/github/fluz/cv?branch=master)
 
 # Fernando Luz's CV
 
