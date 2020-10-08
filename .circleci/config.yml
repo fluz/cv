@@ -23,7 +23,7 @@ jobs:
             cp -r assets/js dist/assets
       - run:
           name: Build DevResume CV view
-          command: python ./tools/jinja2-render -y fluz.yml -o dist/index.html DevResume/index.html.jinja
+          command: python ./tools/jinja2-render -y fluz.yml -o dist/index.html DevResume/index.html.jinja && cp dist/index.html dist/cv_devresume.html
       - run:
           name: Build CeeVee CV view
           command: python ./tools/jinja2-render -y fluz.yml -o dist/cv_ceevee.html ceevee/index.html.jinja
