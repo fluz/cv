@@ -72,19 +72,19 @@ Teaching-related responsibilities such as giving lectures, tutoring, manage home
 
 ## Education
 
-### Ph.D. in Science, *2010 - 2015*
+### Ph.D. in Computing Engineering, *2015*
 
 **University:** University of São Paulo (USP)
 **Institute:** Polytechnic School
 **Theme**: Methodology for execution of parallel applications based on BSP model with heterogeneous tasks
 
-### M.Sc. in Applied Physics, *2006 - 2010*
+### M.Sc. in Applied Physics, *2010*
 
 **University:** University of São Paulo (USP)
 **Institute:** Physics Institute of São Carlos
 **Theme**: Methodology for execution of parallel applications based on BSP model with heterogeneous tasks
 
-### B.Sc. in Physics, *2001 - 206*
+### B.Sc. in Physics, *2006*
 
 **University:** University of São Paulo (USP)
 **Institute:** Physics Institute of São Carlos
@@ -114,7 +114,7 @@ Certificate: [Scientific Computing with Python]( https://www.freecodecamp.org/ce
 ## Skills
 
 * *C++*
-* *bash*
+* *Bash*
 * *Python*
 * *JavaScript*
 * *C*

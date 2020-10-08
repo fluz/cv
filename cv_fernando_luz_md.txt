@@ -118,19 +118,19 @@ ACHIEVEMENTS / TASKS:
 
 Education
 
-Ph.D. in Science, _2010 - 2015_
+Ph.D. in Computing Engineering, _2015_
 
 UNIVERSITY: University of São Paulo (USP) INSTITUTE: Polytechnic School
 THEME: Methodology for execution of parallel applications based on BSP
 model with heterogeneous tasks
 
-M.Sc. in Applied Physics, _2006 - 2010_
+M.Sc. in Applied Physics, _2010_
 
 UNIVERSITY: University of São Paulo (USP) INSTITUTE: Physics Institute
 of São Carlos THEME: Methodology for execution of parallel applications
 based on BSP model with heterogeneous tasks
 
-B.Sc. in Physics, _2001 - 206_
+B.Sc. in Physics, _2006_
 
 UNIVERSITY: University of São Paulo (USP) INSTITUTE: Physics Institute
 of São Carlos
@@ -160,7 +160,7 @@ Languages
 Skills
 
 -   _C++_
--   _bash_
+-   _Bash_
 -   _Python_
 -   _JavaScript_
 -   _C_
