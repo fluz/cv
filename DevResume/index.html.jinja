@@ -128,7 +128,7 @@
 								<div class="item">
 									<h4 class="item-title">Technical</h4>
 									<ul class="list-unstyled resume-skills-list">
-										((* for s in technical_skills *))
+										((* for s in (technical_skills|sort(reverse=true, attribute='level'))[0:5] *))
 											<li class="mb-2">(((s.skill)))</li>
 										((* endfor *))
 										</ul>
@@ -174,14 +174,24 @@
 										</ul>
 									</section><!--//languages-section-->
 									<section class="skills-section py-3">
-										<h3 class="text-uppercase resume-section-heading mb-4">Interests <i class="far fa-bookmark"></i></h3>
+										<h3 class="text-uppercase resume-section-heading mb-4">Interests <i class="fas fa-bookmark"></i></h3>
 										<ul class="list-unstyled resume-interests-list mb-0">
                       ((* for i in interest *))
 											<li class="mb-2"><i class="fas (((i.awesome))) mr-2" data-fa-transform="down-4"></i>(((i.item)))</li>
                       ((* endfor *))
-										</ul><!--//interests-section-->
+										</ul><!--//cv_views-section-->
 									</section>
-									
+									<section class="skills-section py-3">
+										<h3 class="text-uppercase resume-section-heading mb-4">CV layouts <i class="fas fa-file-alt"></i></h3>
+										<ul class="list-unstyled resume-interests-list mb-0">
+                      ((* for v in cv_views *))
+											<li>
+												<div class="font-weight-bold"><a href="(((v.link)))" target="_blank">(((v.item)))</a></div>
+											</li>
+                      ((* endfor *))
+										</ul><!--//cv_views-section-->
+									</section>
+
 								</aside><!--//resume-aside-->
 							</div><!--//row-->
 						</div><!--//resume-body-->

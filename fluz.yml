@@ -91,22 +91,25 @@ professional:
 education:
   - university: University of São Paulo (USP)
     institute: Polytechnic School
-    title: Ph.D. in Science
-    period: 2010 - 2015
+    title: Ph.D. in Computing Engineering
+    period: 2015
+    full_period: 2010 - 2015
     theme: Methodology for execution of parallel applications based on BSP model with heterogeneous tasks
     scholarship: FUSP - University of São Paulo Foundation
 
   - university: University of São Paulo (USP)
     institute: Physics Institute of São Carlos
     title: M.Sc. in Applied Physics
-    period: 2006 - 2010
+    period: 2010
+    full_period: 2006 - 2010
     theme: Methodology for execution of parallel applications based on BSP model with heterogeneous tasks
     scholarship: CNPq - National Council for Scientific and Technological Development
 
   - university: University of São Paulo (USP)
     institute: Physics Institute of São Carlos
     title: B.Sc. in Physics
-    period: 2001 - 206
+    period: 2006
+    full_period: 2001 - 206
 
 certification:
   - school: Free Code Camp
@@ -136,8 +139,8 @@ language:
 technical_skills:
   - skill: C++
     level: 9
-  - skill: bash
-    level: 10
+  - skill: Bash
+    level: 8.9
   - skill: Python
     level: 8
   - skill: JavaScript
@@ -181,3 +184,15 @@ interest:
     awesome: fa-futbol
   - item: MOOC's
     awesome: fa-chalkboard-teacher
+
+cv_views:
+  - item: DevResume
+    link: cv_devresume.html
+  - item: CeeVee
+    link: cv_ceevee.html
+  - item: Markdown
+    link: cv_fernando_luz.md
+  - item: Markdown (html)
+    link: cv_fernando_luz_md.html
+  - item: Markdown (txt)
+    link: cv_fernando_luz_md.txt
