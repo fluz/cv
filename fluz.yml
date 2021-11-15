@@ -36,7 +36,9 @@ professional:
     position: Senior Software Engineer
     period: 2021 - Present
     description: |
-      Integrate a new team from the ground to create a new solution for banking financial services. The tech stack in this project uses **Kotlin (BE)**, **SpringBoot**, **React (FE)**, **Redis**, **PostGres SQL**, **MongoDB**, **RabbitMQ**. 
+      Integrate a new team from the ground to create a new solution for banking financial services. 
+      
+      The tech stack in this project uses **Kotlin (BE)**, **SpringBoot**, **React (FE)**, **Redis**, **PostGres SQL**, **MongoDB**, **RabbitMQ**. 
 
   - company: Capgemini Portugal [ASML Project]
     position: Senior Software Engineer
