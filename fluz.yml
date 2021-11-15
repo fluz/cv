@@ -16,8 +16,8 @@ lattes: http://lattes.cnpq.br/9654315760977270
 twitter: https://twitter.com/f_luz
 skype: https://join.skype.com/invite/nykuWkXFS5Av
 aboutme: |
-  **13+ years** of developing and working in projects led me to have hands-on experience solving **complex problems** in software development using several languages and frameworks across a wide range of companies, including startups, oil and gas industries, educational institutions and research labs. Driven **self-starter** and **fast learner**, always supporting my development teams with **top-notch coding skills**.  
-  One of the things that most motivate me is the challenge to maintain **team cooperation** to reach objectives in the process development. I have experience in a Scrum/Kanban methodology implementation, I strongly believe that **sharing knowledge** is a key point in a dev team, and I do my best to write clear and good code and implement best practices.
+  **13+ years** of developing and working in projects led me to have hands-on experience solving **complex problems** in software development using several languages and frameworks across a wide range of companies, including startups, oil and gas industries, educational institutions, and research labs. Driven **self-starter** and **fast learner**, always supporting my development teams with **top-notch coding skills**.  
+  I really like the challenge to maintain **team cooperation** to reach objectives/deliveries in the process development. I have experience in a Scrum/Kanban methodology implementation, I strongly believe that **sharing knowledge** is a key point in a dev team, and I do my best to write clear and good code and implement best practices.
 
 aboutme_generic: |
   13+ years of developing and working in projects led me to have hands-on experience solving complex problems in software development using several languages and frameworks across a wide range of companies, including startups, oil and gas industries, educational institutions and research labs. Driven self-starter and fast learner, always supporting my development teams with top-notch coding skills. In my last project I lead a pilot project to migrate around 400 test cases with a constraints of 10 weeks with 100% achievement.
@@ -36,13 +36,14 @@ professional:
     position: Senior Software Engineer
     period: 2021 - Present
     description: |
-      Integrate a new team from the ground to create a new solution for banking financial services. The tech stack in this project uses Kotlin (BE), SpringBoot, React (FE), Redis, PostGres SQL, MongoDB, RabbitMQ. 
+      Integrate a new team from the ground to create a new solution for banking financial services. The tech stack in this project uses **Kotlin (BE)**, **SpringBoot**, **React (FE)**, **Redis**, **PostGres SQL**, **MongoDB**, **RabbitMQ**. 
 
-  - company: Altran Portugal [ASML Project]
+  - company: Capgemini Portugal [ASML Project]
     position: Senior Software Engineer
     period: 2018 - 2021
     description: |
       Responsible to start the **ASML** project, where I contributed in **Variant Pattern** implementation at the robot component to be used in next lithography machine generation (EXE-5000), and currently I'm leading the Portugal team to expand unit tests quality using a framework based on **gtest**.
+      I was one of the founders in the Meetup internal group in Altran PT.
 
     achievements:
       - item: Delivered first version for RYUN (Universal Pick and Place Robot) component, with **all features planned** for this version;
