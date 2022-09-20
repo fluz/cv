@@ -16,11 +16,11 @@ lattes: http://lattes.cnpq.br/9654315760977270
 twitter: https://twitter.com/f_luz
 skype: https://join.skype.com/invite/nykuWkXFS5Av
 aboutme: |
-  **13+ years** of developing and working in projects led me to have hands-on experience solving **complex problems** in software development using several languages and frameworks across a wide range of companies, including startups, oil and gas industries, educational institutions, and research labs. Driven **self-starter** and **fast learner**, always supporting my development teams with **top-notch coding skills**.  
+  **15+ years** of developing and working in projects led me to have hands-on experience solving **complex problems** in software development using several languages and frameworks across a wide range of companies, including startups, oil and gas industries, educational institutions, and research labs. Driven **self-starter** and **fast learner**, always supporting my development teams with **top-notch coding skills**.
   I enjoy the challenge to maintain **team cooperation** to achieve objectives/deliveries in the process development. I strongly believe that **sharing knowledge** is a key point in a dev team, and I do my best to write clear and good code and implement best practices.
 
 aboutme_generic: |
-  13+ years of developing and working in projects led me to have hands-on experience solving complex problems in software development using several languages and frameworks across a wide range of companies, including startups, oil and gas industries, educational institutions and research labs. Driven self-starter and fast learner, always supporting my development teams with top-notch coding skills. In my last project I lead a pilot project to migrate around 400 test cases with a constraints of 10 weeks with 100% achievement.
+  15+ years of developing and working in projects led me to have hands-on experience solving complex problems in software development using several languages and frameworks across a wide range of companies, including startups, oil and gas industries, educational institutions and research labs. Driven self-starter and fast learner, always supporting my development teams with top-notch coding skills. In my last project I lead a pilot project to migrate around 400 test cases with a constraints of 10 weeks with 100% achievement.
 
 aboutme_bkp: |
   I am a developer with a Ph.D. in High-Performance Computing (HPC) and with over 10 years of experience in **C++/C** developing numerical models and simulators.
@@ -33,11 +33,22 @@ aboutme_bkp: |
 
 professional:
   - company: Talkdesk
-    position: Senior Software Engineer
-    period: 2021 - Present
+    position: Associate Engineering Manager
+    period: 2022 - Present
     description: |
-      Integrate a new team from the ground to create a new solution for banking financial services. 
-      
+      Management of the Cross Industries projects. The first one is a development team, responsible to integrate solutions to be use in other products developed by our BU. The second is QA team, responsible to provide a framework and procedure to validate the quality of our products.  (manager of 7 Individual Contributors from entry levels to leads)
+
+    achievements:
+      - item: Release of Agent Flows project (integration between EDP, Talkdesk and Zingtree) summer release with only 7 months (team creation, backlog organization and implementation);
+      - item: Restructure the QA management, providing some guidance how support the teams and organizing the backlog;
+      - item: Define and implement the 1:1 meetings, growth plans for each Indivudual Contributors and promote the link between each team member to V2M2.
+
+  - company: Talkdesk
+    position: Senior Software Engineer
+    period: 2021 - 2022
+    description: |
+      Integrate a new team from the ground to create a new solution for banking financial services.
+
       The tech stack in this project uses **Kotlin (BE)**, **SpringBoot**, **React (FE)**, **Redis**, **PostGres SQL**, **MongoDB**, **RabbitMQ**.
 
     achievements:
@@ -62,7 +73,7 @@ professional:
   - company: Technomar Engineering
     position: IT Manager
     period: 2016 - 2018
-    description: |  
+    description: |
       **Managed** the team responsible to implement new features in the **TMS (Technomar Maritime Simulator)**. **TMS** is a vessel maneuver simulator used in training activities.
       **Launched** the certification planning for **TMS** simulator by [DNV GL agency](https://www.dnvgl.com/), and the **collaborated** in the the core of hydrodynamic numerical model applied in a "full bridge" simulator.
       **Cultivated** good practices in software development process, such as **Scrum/Kanban** board, **TDD**, **Git** adoption and **mentored** meeting sessions to promote the homogenization of the knowledge of the team.
@@ -75,7 +86,7 @@ professional:
   - company: Numerical Offshore Tank
     position: Researcher / HPC Software Engineer
     period: 2008 - 2016
-    description: |  
+    description: |
       My role in the TPN laboratory was to develop a set of applications with **High-Performance Computing**. The languages I use was **C++/C**, **Python**, **MPI/sockets** and **bash** in Linux and Windows environment. Other duties includes testing and validation of numerical simulations, optimization, implementation of parallel improvements and integration with other projects.
       I also worked in others several projects, including the first version of **vessel maneuver simulator** called **SMH**. This project was select as finalist of **ANP (National Petroleum Agency)** [Prize Award for Technological Innovation in 2016](http://www.anp.gov.br/pesquisa-desenvolvimento-inovacao/302-premio-anp-de-inovacao-tecnologica/edicoes-anteriores/888-premio-anp-de-inovacao-tecnologica-2016).
 
@@ -91,7 +102,7 @@ professional:
   - company: Paulista University
     position: Graduate Full Professor
     period: 2011 - 2016
-    description: |  
+    description: |
       Teaching-related responsibilities such as giving lectures, tutoring, manage homeworks, laboratory activities, exams preparation and grading.
 
     achievements:
@@ -102,7 +113,7 @@ professional:
       - item: Programming Logic and Algorithms;
       - item: Artificial Intelligence;
       - item: Distributed System.
-  
+
 education:
   - university: University of São Paulo (USP)
     institute: Polytechnic School
@@ -192,7 +203,7 @@ professional_skills:
 
 interest:
   - item: Travel
-    awesome: fa-globe-americas 
+    awesome: fa-globe-americas
   - item: Photography
     awesome: fa-camera-retro
   - item: Soccer (SPFC :-) )
