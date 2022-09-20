@@ -17,7 +17,7 @@ jobs:
           command: |
             mkdir dist
             mkdir dist/assets
-            cp -r assets/css dist/assets 
+            cp -r assets/css dist/assets
             cp -r assets/fontawesome dist/assets
             cp -r assets/images dist/assets
             cp -r assets/js dist/assets
@@ -38,7 +38,7 @@ jobs:
           command: pandoc -f markdown -t plain -s -o dist/cv_fernando_luz_md.txt dist/cv_fernando_luz.md
       - persist_to_workspace:
           root: .
-          paths: 
+          paths:
             - dist
   cv-deploy:
     docker:
@@ -58,10 +58,10 @@ jobs:
             git config user.name "ci-build"
       - add_ssh_keys:
           fingerprints:
-            - "5f:4e:ba:c9:ad:17:70:69:d9:45:d9:04:fc:15:1e:41"
+            - "b4:07:67:3e:1c:46:a4:4c:9e:70:f6:4f:7a:18:82:ea"
       - run:
           name: Deploy CVs to gh-pages branch
-          command: gh-pages --dotfiles --message "[skip ci] CV Updates" --dist ./dist 
+          command: gh-pages --dotfiles --message "[skip ci] CV Updates" --dist ./dist
 
 workflows:
   version: 2
