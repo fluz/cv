@@ -3,10 +3,10 @@ name: Fernando Luz
 meta_description: |
   Fernando Luz resume's showing some of my experiences, challenges and achievements as developer/researcher/professor/student.
 user: fluz
-profession: Senior Software Engineer / Researcher
+profession: Associate Engineering Manager
 email: prof.fernando.luz@gmail.com
 homepage: tbd
-city: Porto
+city: Vila Nova de Gaia
 country: Portugal
 maps_link: https://goo.gl/maps/SB8WgUCdqnM13S7U6
 github: https://github.com/fluz
@@ -169,12 +169,16 @@ technical_skills:
     level: 8.9
   - skill: Python
     level: 8
+  - skill: PMS 1
+    level: 8
   - skill: JavaScript
     level: 7
   - skill: C
     level: 7
-  - skill: C#
-    level: 4
+  - skill: Kotlin
+    level: 6
+  - skill: SpringBoot
+    level: 6
   - skill: SML
     level: 7
   - skill: HTML
