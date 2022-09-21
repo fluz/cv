@@ -138,6 +138,12 @@ education:
     full_period: 2001 - 206
 
 certification:
+  - school: Scrum.org
+    course: Professional Scrum Master
+    period: 2022
+    load: ~20h
+    credential: https://www.credly.com/badges/ee47dbe0-27c5-4dc4-9b09-815c48b11378/public_url
+
   - school: Free Code Camp
     course: Responsive Web Design
     period: 2020
@@ -169,7 +175,7 @@ technical_skills:
     level: 8.9
   - skill: Python
     level: 8
-  - skill: PMS 1
+  - skill: Agility
     level: 8
   - skill: JavaScript
     level: 7
