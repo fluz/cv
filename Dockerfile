@@ -23,13 +23,12 @@ RUN mkdir ${APP_HOME}
 WORKDIR ${APP_HOME}
 
 ADD build.ninja ${APP_HOME}
+ADD fluz.yml ${APP_HOME}
 ADD ceevee ${APP_HOME}/ceevee
 ADD markdown ${APP_HOME}/markdown
 ADD tools ${APP_HOME}/tools
 ADD DevResume ${APP_HOME}/DevResume
 ADD assets ${APP_HOME}/assets
-
-COPY build.ninja build.ninja
-COPY ./ceevee  dest
+ADD pandoc-bootstrap ${APP_HOME}/pandoc-bootstrap
 
 CMD ["ninja","-v"]
