@@ -21,14 +21,18 @@ ENV LC_ALL=en_US.UTF-8
 ENV APP_HOME=/app
 RUN mkdir ${APP_HOME}
 WORKDIR ${APP_HOME}
+RUN mkdir build
 
 ADD build.ninja ${APP_HOME}
+ADD README.md ${APP_HOME}
 ADD fluz.yml ${APP_HOME}
+ADD assets ${APP_HOME}/build/assets
+ADD moderncvclassic ${APP_HOME}/moderncvclassic
 ADD ceevee ${APP_HOME}/ceevee
 ADD markdown ${APP_HOME}/markdown
 ADD tools ${APP_HOME}/tools
 ADD DevResume ${APP_HOME}/DevResume
-ADD assets ${APP_HOME}/assets
 ADD pandoc-bootstrap ${APP_HOME}/pandoc-bootstrap
 
-CMD ["ninja","-v"]
+# ENTRYPOINT ["ninja","-v"]
+RUN ["/bin/bash"]
