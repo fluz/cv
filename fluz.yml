@@ -169,22 +169,22 @@ language:
     skill: Fluent
 
 technical_skills:
-  - skill: C++
-    level: 9
-  - skill: Bash
-    level: 8.9
-  - skill: Python
-    level: 8
   - skill: Agility
+    level: 9
+  - skill: Kotlin
     level: 8
+  - skill: SpringBoot
+    level: 7
+  - skill: C++
+    level: 8
+  - skill: Bash
+    level: 8
+  - skill: Python
+    level: 7
   - skill: JavaScript
     level: 7
   - skill: C
     level: 7
-  - skill: Kotlin
-    level: 6
-  - skill: SpringBoot
-    level: 6
   - skill: SML
     level: 7
   - skill: HTML
@@ -196,9 +196,9 @@ technical_skills:
   - skill: MongoDB
     level: 5
   - skill: Lead and deliver complex software systems
-    level: 7
+    level: 8
   - skill: Object-oriented design
-    level: 7
+    level: 8
   - skill: Design Patterns
     level: 7
   - skill: Functional Paradigm
@@ -223,12 +223,12 @@ interest:
 
 cv_views:
   - item: DevResume
-    link: cv_devresume.html
+    link: ../DevResume/index.html
   - item: CeeVee
-    link: cv_ceevee.html
+    link: ../ceevee/index.html
   - item: Markdown
-    link: cv_fernando_luz.md
+    link: ../markdown/cv.md
   - item: Markdown (html)
-    link: cv_fernando_luz_md.html
+    link: ../markdown/cv.html
   - item: Markdown (txt)
-    link: cv_fernando_luz_md.txt
+    link: ../markdown/cv.txt
