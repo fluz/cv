@@ -29,3 +29,6 @@ jobs:
   #   steps:
   #     - uses: actions/checkout@v2
   #     - uses: docker://lpenz/omnilint:v0.2
+
+  # Token for workflow
+  # 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
