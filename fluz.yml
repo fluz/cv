@@ -68,7 +68,7 @@ professional:
       - item: Added unit tests for RYUN component with **100% of code coverage**;
       - item: Contributed with the RYAU component **migration** to legacy version;
       - item: Generated an investigation for RYAU autotesters, where I found **65% fake tests** (tests without implementation);
-      - item: Achieved with success the first phase for UTTK to ATTEST migration **(~400 tests in 10 weeks)**.
+      - item: Achieved with success the first phase for UTTK to ATTEST migration **(around 400 tests in 10 weeks)**.
 
   - company: Technomar Engineering
     position: IT Manager
@@ -122,14 +122,16 @@ education:
     full_period: 2010 - 2015
     theme: Methodology for execution of parallel applications based on BSP model with heterogeneous tasks
     scholarship: FUSP - University of São Paulo Foundation
+    title_theme: 'PhD - Thesis Title: ``Methodology for execution of parallel applications based on BSP model with heterogeneous tasks``'
 
   - university: University of São Paulo (USP)
     institute: Physics Institute of São Carlos
     title: M.Sc. in Applied Physics
     period: 2010
     full_period: 2006 - 2010
-    theme: Methodology for execution of parallel applications based on BSP model with heterogeneous tasks
+    theme: Implementation of the MILC package in the study of full QCD
     scholarship: CNPq - National Council for Scientific and Technological Development
+    title_theme: 'MSc - Dissertation Title: ``Implementation of the MILC package in the study of full QCD``'
 
   - university: University of São Paulo (USP)
     institute: Physics Institute of São Carlos
@@ -141,25 +143,25 @@ certification:
   - school: Scrum.org
     course: Professional Scrum Master
     period: 2022
-    load: ~20h
+    load: 20h
     credential: https://www.credly.com/badges/ee47dbe0-27c5-4dc4-9b09-815c48b11378/public_url
 
   - school: Free Code Camp
     course: Responsive Web Design
     period: 2020
-    load: ~300h
+    load: 300h
     credential: https://www.freecodecamp.org/certification/fcc306e7694-fe85-4564-b699-2965fc0ab265/responsive-web-design
 
   - school: Free Code Camp
     course: JavaScript Algorithms and Data Structures
     period: 2020
-    load: ~300h
+    load: 300h
     credential: https://www.freecodecamp.org/certification/fcc306e7694-fe85-4564-b699-2965fc0ab265/javascript-algorithms-and-data-structures
 
   - school: Free Code Camp
     course: Scientific Computing with Python
     period: 2020
-    load: ~400h
+    load: 400h
     credential: https://www.freecodecamp.org/certification/fcc306e7694-fe85-4564-b699-2965fc0ab265/scientific-computing-with-python-v7
 
 language:
@@ -174,16 +176,20 @@ technical_skills:
   - skill: Kotlin
     level: 8
   - skill: SpringBoot
-    level: 7
+    level: 8
   - skill: C++
     level: 8
   - skill: Bash
     level: 8
   - skill: Python
-    level: 7
-  - skill: JavaScript
-    level: 7
+    level: 8
+  - skill: Object-oriented design
+    level: 8
+  - skill: Jira
+    level: 8
   - skill: C
+    level: 8
+  - skill: JavaScript
     level: 7
   - skill: SML
     level: 7
@@ -194,22 +200,19 @@ technical_skills:
   - skill: Matlab
     level: 6
   - skill: MongoDB
-    level: 5
-  - skill: Lead and deliver complex software systems
-    level: 8
-  - skill: Object-oriented design
-    level: 8
+    level: 6
   - skill: Design Patterns
     level: 7
   - skill: Functional Paradigm
     level: 7
 
-professional_skills:
+soft_skills:
   - skill: Team player
   - skill: Problem Solver
   - skill: Ownership
   - skill: Time management
   - skill: Build solutions
+  - skill: Lead and deliver complex software systems
 
 interest:
   - item: Travel
@@ -232,3 +235,11 @@ cv_views:
     link: ../markdown/cv.html
   - item: Markdown (txt)
     link: ../markdown/cv.txt
+
+volunteering:
+  - ong: Associação de Pais e Encarregados de Educação da Escola Básica Manuel António Pina
+    position: President
+    period: Jun 2022 - Present
+  - ong: Associação de Pais e Encarregados de Educação da Escola Básica Manuel António Pina
+    position: Executive Secretary
+    period: Oct 2021 - Jun 2022

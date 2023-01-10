@@ -30,6 +30,10 @@ rule cdpdflatex
 build build/moderncvclassic/cv.tex: cvrender   moderncvclassic/cv.tex.jinja | fluz.yml ./tools/jinja2-render
 build build/moderncvclassic/cv.pdf: cdpdflatex build/moderncvclassic/cv.tex | ./tools/cddo ./tools/latexer
 
+# europasscv view:
+build build/europasscv/cv.tex: cvrender   europasscv/cv.tex.jinja | fluz.yml ./tools/jinja2-render
+build build/europasscv/cv.pdf: cdpdflatex build/europasscv/cv.tex | ./tools/cddo ./tools/latexer
+
 # DevResume view:
 build build/DevResume/index.html: cvrender DevResume/cv.html.jinja | fluz.yml ./tools/jinja2-render
 

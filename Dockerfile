@@ -7,9 +7,9 @@ RUN set -e -x; \
     apt-get update; \
     apt-get install -y --no-install-recommends \
         pandoc ninja-build \
-        texlive texlive-latex-extra cm-super \
+        texlive texlive-latex-extra texlive-plain-generic texlive-latex-recommended cm-super \
         python3-yaml python3-jinja2 \
-        locales
+        locales inkscape
 
 # setup su and locale
 RUN set -e -x; \
@@ -33,6 +33,6 @@ ADD markdown ${APP_HOME}/markdown
 ADD tools ${APP_HOME}/tools
 ADD DevResume ${APP_HOME}/DevResume
 ADD pandoc-bootstrap ${APP_HOME}/pandoc-bootstrap
+ADD europasscv ${APP_HOME}/europasscv
 
-# ENTRYPOINT ["ninja","-v"]
-RUN ["/bin/bash"]
+ENTRYPOINT ["ninja","-v"]
