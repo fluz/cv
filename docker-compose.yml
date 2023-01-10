@@ -1,6 +1,7 @@
 version: "3.9"
+
 services:
-  web:
+  cv:
     build: .
-    ports:
-      - "8000:5000"
+    volumes:
+    - ./build:/app/build
