@@ -235,6 +235,8 @@ cv_views:
     link: ../markdown/cv.html
   - item: Markdown (txt)
     link: ../markdown/cv.txt
+  - item: Europass CV
+    link: ../europasscv/cv.pdf
 
 volunteering:
   - ong: Associação de Pais e Encarregados de Educação da Escola Básica Manuel António Pina

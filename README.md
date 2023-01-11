@@ -13,12 +13,7 @@ My CV is available in the following formats, or layouts:
 - [markdown](https://fluz.github.io/cv/cv_fernando_luz.md) (markdown) and two rendered versions:
   - [plain text](https://fluz.github.io/cv/cv_fernando_luz_md.txt)
   - [html](https://fluz.github.io/cv/cv_fernando_luz_md.html)
-
-### To be created
-
-- [modern cv classic](https://fluz.github.io/cv/cv.pdf) (PDF)
-- [resume.cls](https://fluz.github.io/cv/cv_cls.pdf) (PDF)
-- [beamer](https://fluz.github.io/cv/cv_beamer.pdf) (PDF)
+- [europassCV](https://fluz.github.io/europasscv/cv.pdf)
 
 ## Behind the scenes
 
@@ -31,7 +26,6 @@ I keep my *Curriculum Vitae* using software development techniques, namely:
 ## To do
 
 - Code validation ?
-- New PDF view ?
 
 ## Structure
 
