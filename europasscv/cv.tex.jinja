@@ -6,12 +6,10 @@
 \usepackage[english]{babel}
 
 \ecvname{(((name)))}
-\ecvaddress{(((city))) - (((country)))}
-((* if phone *))
+((* if show_phone *))
 \ecvmobile{(((phone)))}
-% \ecvtelephone{+353 127 6689}
-% \ecvworkphone{+353 999 888 777}
 ((* endif *))
+\ecvaddress{(((city))) - (((country)))}
 \ecvemail{(((email)))}
 % \ecvhomepage{(((homepage)))}
 % \ecvgitpage{www.git.example.org}
@@ -71,7 +69,7 @@
   ((* for p in professional *))
   \ecvtitle{(((p.period)))}{(((p.position)))}
   \ecvitem{}{(((p.company)))}
-  \ecvitem{}{(((p.description | markdown | regex('\\n',' %\\n') )))}
+  \ecvitem{}{(((p.description | markdown )))}
   ((* if p.achievements *))
   \ecvitem{Achievements:}{
   \begin{ecvitemize}
