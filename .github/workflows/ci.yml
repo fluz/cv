@@ -12,7 +12,6 @@ jobs:
         uses: isbang/compose-action@v1.4.1
         with:
           compose-file: "./docker-compose.yml"
-          down-flags: "--volumes"
           services: |
             cv
     # runs-on: ubuntu-latest
