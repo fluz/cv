@@ -2,15 +2,7 @@
 name: CI
 on: [push, pull_request]
 jobs:
-  # build:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: ./.github/actions/build
-  build-deploy:
-    needs:
-      - build
-
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -23,7 +15,16 @@ jobs:
           down-flags: "--volumes"
           services: |
             cv
+    # runs-on: ubuntu-latest
+    # steps:
+    #   - uses: actions/checkout@v2
+    #   - uses: ./.github/actions/build
+  build-deploy:
+    needs:
+      - build
 
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
