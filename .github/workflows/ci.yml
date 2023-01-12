@@ -14,16 +14,7 @@ jobs:
           compose-file: "./docker-compose.yml"
           services: |
             cv
-    # runs-on: ubuntu-latest
-    # steps:
-    #   - uses: actions/checkout@v2
-    #   - uses: ./.github/actions/build
-  build-deploy:
-    needs:
-      - build
 
-    runs-on: ubuntu-latest
-    steps:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
@@ -31,3 +22,13 @@ jobs:
           folder: build
           single-commit: true
           clean: true
+    # runs-on: ubuntu-latest
+    # steps:
+    #   - uses: actions/checkout@v2
+    #   - uses: ./.github/actions/build
+  # build-deploy:
+  #   needs:
+  #     - build
+
+  #   runs-on: ubuntu-latest
+  #   steps:
