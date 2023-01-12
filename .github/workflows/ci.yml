@@ -2,33 +2,32 @@
 name: CI
 on: [push, pull_request]
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: ./.github/actions/build
+  # build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: ./.github/actions/build
   build-deploy:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs:
       - build
-      # - omnilint
+
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: ./.github/actions/build
-      - run: rm -f .gitignore
-      - name: deploy
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Build 🔧
+        uses: isbang/compose-action@v1.4.1
+        with:
+          compose-file: "./docker-compose.yml"
+          down-flags: "--volumes"
+          services: |
+            cv
+
+      - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
           folder: build
           single-commit: true
           clean: true
-  # omnilint:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: docker://lpenz/omnilint:v0.2
-
-  # Token for workflow
-  # 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
