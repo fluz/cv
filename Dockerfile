@@ -26,7 +26,7 @@ COPY build.ninja ${APP_HOME}
 COPY README.md ${APP_HOME}
 COPY fluz.yml ${APP_HOME}
 COPY build_cv.sh ${APP_HOME}
-COPY assets ${APP_HOME}/assets
+COPY assets ${APP_HOME}/build/assets
 COPY moderncvclassic ${APP_HOME}/moderncvclassic
 COPY ceevee ${APP_HOME}/ceevee
 COPY markdown ${APP_HOME}/markdown
@@ -35,6 +35,8 @@ COPY DevResume ${APP_HOME}/DevResume
 COPY pandoc-bootstrap ${APP_HOME}/pandoc-bootstrap
 COPY europasscv ${APP_HOME}/europasscv
 
-RUN ["./build_cv.sh"]
-
-RUN ["ls", "-lhtr", ",./build"]
+RUN ["ninja","-v"]
+# RUN ["./build_cv.sh"]
+RUN ["cp", "${APP_HOME}/build/DevResume/index.html","${APP_HOME}/build/index.html"]
+RUN ["sed","-i", "'s|\.\./|\./|g'", "./build/index.html"]
+RUN ["ls", "-l", "${APP_HOME}/build"]
