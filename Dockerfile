@@ -19,20 +19,20 @@ ENV LC_ALL=en_US.UTF-8
 
 # copy host to docker
 ENV APP_HOME=/app
-RUN mkdir ${APP_HOME}
+RUN ["mkdir", "${APP_HOME}"]
 WORKDIR ${APP_HOME}
-RUN mkdir build
 
-ADD build.ninja ${APP_HOME}
-ADD README.md ${APP_HOME}
-ADD fluz.yml ${APP_HOME}
-ADD assets ${APP_HOME}/build/assets
-ADD moderncvclassic ${APP_HOME}/moderncvclassic
-ADD ceevee ${APP_HOME}/ceevee
-ADD markdown ${APP_HOME}/markdown
-ADD tools ${APP_HOME}/tools
-ADD DevResume ${APP_HOME}/DevResume
-ADD pandoc-bootstrap ${APP_HOME}/pandoc-bootstrap
-ADD europasscv ${APP_HOME}/europasscv
+COPY build.ninja ${APP_HOME}
+COPY README.md ${APP_HOME}
+COPY fluz.yml ${APP_HOME}
+COPY assets ${APP_HOME}/assets
+COPY moderncvclassic ${APP_HOME}/moderncvclassic
+COPY ceevee ${APP_HOME}/ceevee
+COPY markdown ${APP_HOME}/markdown
+COPY tools ${APP_HOME}/tools
+COPY DevResume ${APP_HOME}/DevResume
+COPY pandoc-bootstrap ${APP_HOME}/pandoc-bootstrap
+COPY europasscv ${APP_HOME}/europasscv
 
-ENTRYPOINT ["ninja","-v"]
+RUN ["./build_cv"]
+RUN ["/bin/bash"]
