@@ -40,3 +40,5 @@ RUN ["ninja","-v"]
 RUN ["cp", "./build/DevResume/index.html","./build/index.html"]
 RUN sed -i 's|\.\./|\./|g' ./build/index.html
 # RUN ["ls", "-l", "${APP_HOME}/build"]
+
+COPY --from=BUILD_IMAGE ${APP_HOME}/build ./build
