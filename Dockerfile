@@ -38,5 +38,5 @@ COPY europasscv ${APP_HOME}/europasscv
 RUN ["ninja","-v"]
 # RUN ["./build_cv.sh"]
 RUN ["cp", "./build/DevResume/index.html","./build/index.html"]
-RUN ["sed","-i", "'s|\.\./|\./|g'", "./build/index.html"]
+RUN sed -i 's|\.\./|\./|g' ./build/index.html
 # RUN ["ls", "-l", "${APP_HOME}/build"]
