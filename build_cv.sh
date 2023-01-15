@@ -6,5 +6,7 @@ ninja -v
 # copy assets to build file
 cp -r ./assets ./build/assets
 
-# copy ceevee view as default view
-cp ./build/ceevee/index.html ./build/index.html
+# copy DevResume view as default view
+cp ./build/DevResume/index.html ./build/index.html
+# fix the correct path for the links
+sed -i 's|\.\./|\./|g' ./build/index.html

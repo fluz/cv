@@ -25,6 +25,7 @@ WORKDIR ${APP_HOME}
 COPY build.ninja ${APP_HOME}
 COPY README.md ${APP_HOME}
 COPY fluz.yml ${APP_HOME}
+COPY build_cv.sh ${APP_HOME}
 COPY assets ${APP_HOME}/assets
 COPY moderncvclassic ${APP_HOME}/moderncvclassic
 COPY ceevee ${APP_HOME}/ceevee
@@ -34,5 +35,4 @@ COPY DevResume ${APP_HOME}/DevResume
 COPY pandoc-bootstrap ${APP_HOME}/pandoc-bootstrap
 COPY europasscv ${APP_HOME}/europasscv
 
-RUN ["./build_cv"]
-RUN ["/bin/bash"]
+ENTRYPOINT ["./build_cv.sh"]
