@@ -35,4 +35,6 @@ COPY DevResume ${APP_HOME}/DevResume
 COPY pandoc-bootstrap ${APP_HOME}/pandoc-bootstrap
 COPY europasscv ${APP_HOME}/europasscv
 
-ENTRYPOINT ["./build_cv.sh"]
+RUN ["./build_cv.sh"]
+
+RUN ["ls", "-lhtr", ",./build"]
