@@ -2,3 +2,10 @@ version: "3.9"
 services:
   cv:
     build: .
+    command: >
+      sh -cx "ninja -v
+      && cp -r ./assets ./build/assets
+      && cp ./build/DevResume/index.html ./build/index.html
+      && sed -i 's|\\.\\./|\\./|g' ./build/index.html"
+    volumes:
+    - ./build:/app/build

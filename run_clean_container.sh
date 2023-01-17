@@ -2,6 +2,8 @@
 
 echo "Removing previous execution"
 rm -rf build/*
+echo "Copy assets files"
+cp -r assets build/assets
 
 echo "Removing all containers"
 docker ps -a -q | xargs docker rm
