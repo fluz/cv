@@ -13,11 +13,14 @@ jobs:
       - name: Build 🔧
         run: docker compose up cv
 
+      - name: test
+        run: ls -lhtr ./build
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
-          folder: build
+          folder: ./build
           single-commit: true
           clean: true
     # runs-on: ubuntu-latest
