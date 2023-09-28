@@ -21,20 +21,20 @@ phone: +351 91 955 2453
 aboutme: |
   With over **16+ years** of experience in software development, I've evolved from a proficient Software Engineer into an accomplished **Engineering Manager**. My journey has encompassed a wide array of projects and industries, from startups to oil and gas companies, educational institutions, and research labs.
   
-  As a **self-driven**, **quick learner**, and **top-notch coder**, I firmly believe in the importance of **knowledge sharing** and consistently promote **clear**, **high-quality coding** and **best practices**. My transition to Engineering Manager role reflects my passion for **talent development**, driving **impactful projects**, and contributing to **organizational success** at the intersection of technology and engineering.
+  As a **self-driven**, **quick learner**, and **top-notch coder**, I firmly believe in the importance of **knowledge sharing** and consistently promote **clear**, **high-quality coding**, and **best practices**. My transition to the Engineering Manager role reflects my passion for **talent development**, driving **impactful projects**, and contributing to **organizational success** at the intersection of technology and engineering.
 
 professional:
   - company: Talkdesk
     position: Engineering Manager
     period: 2022 - Present
     description: |
-      I've overseen a broad portfolio, including products like **Healthcare Experience Cloud**, **Automated Notifications**, and **Agent Flows**, along with the **QA team**. I've the privilege of leading and mentoring a team of **10+ Individual Contributors**, ranging from entry-level professionals to team leads.
+      I've overseen a broad portfolio, including products like **Healthcare Experience Cloud**, **Automated Notifications**, and **Agent Flows**, along with the **QA team**. I've had the privilege of leading and mentoring a team of **10+ Individual Contributors**, ranging from entry-level professionals to team leads.
 
     achievements:
       - item: The **Healthcare Experience Cloud** has been a cornerstone of our efforts, involving the seamless integration of healthcare call centers with more efficient and informed patient interactions;
       - item: The **Automated Notifications** has been instrumental in enhancing communication, focusing on the definition of rules and events to schedule and deliver notifications, ensuring timely and precise interactions with the customers;
       - item: The **Agent Flows** improved support processes by empowering agents with scripted guidance during customer calls;
-      - item: The **QA team** have established a robust E2E tests framework to rigorously validate product quality, ensuring that our solutions work properly in the Talkdesk environment.
+      - item: The **QA team** has established a robust E2E tests framework to rigorously validate product quality, ensuring that our solutions work properly in the Talkdesk environment.
 
   - company: Talkdesk
     position: Senior Software Engineer
@@ -53,12 +53,12 @@ professional:
     position: Senior Software Engineer
     period: 2018 - 2021
     description: |
-      Started the **ASML** project, where I contributed in the new lithography machine generation project. I lead the Portugal team to expand unit tests implementation with a framework based on **gtest** and implemented the **Variant Pattern** in a robot component.
+      Started the **ASML** project, where I contributed to the new lithography machine generation project. I led the Portugal team to expand unit test implementation with a framework based on **gtest** and implemented the **Variant Pattern** in a robot component.
       I also was one of the founders of the Meetup internal group in Altran PT.
     achievements:
-      - item: Delivered first version for RYUN (Universal Pick and Place Robot) component, with **all features planned** and **100% of code coverage**;
-      - item: Contributed with the RYAU component **migration** to legacy version and investigated for RYAU autotesters, where I found **65% fake tests** (tests without implementation);
-      - item: Achieved with success the first phase for UTTK to ATTEST migration **(around 400 tests in 10 weeks instead of initial estimation of 24 weeks)**.
+      - item: Delivered the first version of the RYUN (Universal Pick and Place Robot) component, with **all features planned** and **100% of code coverage**;
+      - item: Contributed with the RYAU component **migration** to the legacy version and investigated for RYAU autotesters, where I found **65% fake tests** (tests without implementation);
+      - item: Achieved with success the first phase for UTTK to ATTEST migration **(around 400 tests in 10 weeks instead of the initial estimation of 24 weeks)**.
 
   - company: Technomar Engineering
     position: IT Manager
@@ -67,9 +67,9 @@ professional:
       I led a team in charge of implementing new features for the **Technomar Maritime Simulator** used in training activities. I initiated the certification plan with [DNV GL agency](https://www.dnvgl.com/) and contributed to the core of the hydrodynamic numerical model. Additionally, I fostered best practices in software development, including the use of **Scrum**, **Test-Driven Development**, **Git**, and conducted mentoring sessions to enhance team knowledge.
 
     achievements:
-      - item: Enhanced in communication channel using the phonon framework, with gains in **15% speedup** and improve the code maintainability;
-      - item: Orchestrated the **full delivery** of new simulation station at Technomar office, providing a simulator with 360 degrees immersion;
-      - item: Instituted **Gitlab** as tool to obtain code metrics, and manage the bugs, new features, backlog and milestone control for the team and the founders.
+      - item: Enhanced communication channel using the phonon framework, with gains in **15% speedup** and improved the code maintainability;
+      - item: Orchestrated the **full delivery** of a new simulation station at the Technomar office, providing a simulator with 360 degrees immersion;
+      - item: Instituted **Gitlab** as a tool to obtain code metrics, and manage the bugs, new features, backlog, and milestone control for the team and the founders.
 
   - company: Numerical Offshore Tank
     position: Researcher / HPC Software Engineer
@@ -79,14 +79,14 @@ professional:
 
     achievements:
       - item: Optimized parallel execution of the numerical solver in the cluster environment saving around **35% in resources** using my Ph.D. research;
-      - item: Achieved improvements in the Numerical Solver, reducing execution time by **10%** through the utilization of **OpenMP**, and implemented **MPI standards** in Parallel version;
-      - item: Championed the use of *tests in development* flow to increase the development quality and built an initial **CI** with (CDash and CTest) to check the repository integrity.
+      - item: Achieved improvements in the Numerical Solver, reducing execution time by **10%** through the utilization of **OpenMP**, and implemented **MPI standards** in the Parallel version;
+      - item: Championed the use of *development tests* flow to increase the development quality and built an initial **CI** with (CDash and CTest) to check the repository integrity.
 
   - company: Paulista University
     position: Graduate Full Professor
     period: 2011 - 2016
     description: |
-      Teaching-related responsibilities such as giving lectures, tutoring, manage homeworks, laboratory activities, exams preparation and grading.
+      Teaching-related responsibilities such as giving lectures, tutoring, managing homework, laboratory activities, exam preparation, and grading.
 
     # achievements:
     #   - item: Operating System / Open Operating System;
@@ -103,9 +103,9 @@ education:
     title: Ph.D. in Computing Engineering
     period: 2015
     full_period: 2010 - 2015
-    theme: Methodology for execution of parallel applications based on BSP model with heterogeneous tasks
+    theme: Methodology for the execution of parallel applications based on BSP model with heterogeneous tasks
     scholarship: FUSP - University of São Paulo Foundation
-    title_theme: 'PhD - Thesis Title: ``Methodology for execution of parallel applications based on BSP model with heterogeneous tasks``'
+    title_theme: 'PhD - Thesis Title: ``Methodology for execution of parallel applications based on the BSP model with heterogeneous tasks``'
 
   - university: University of São Paulo (USP)
     institute: Physics Institute of São Carlos
