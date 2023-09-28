@@ -28,9 +28,8 @@ professional:
     position: Engineering Manager
     period: 2022 - Present
     description: |
-      As the Engineering Manager at Industries BU, I have overseen a comprehensive portfolio, which includes __Healthcare Experience Cloud__, __Automated Notifications__, and __Agent Flows__ products, along with the dedicated __QA__ team. In this capacity, I've had the privilege of leading and mentoring a team of **13+ Individual Contributors**, ranging from entry-level professionals to team leads.
+      I've overseen a broad portfolio, including products like **Healthcare Experience Cloud**, **Automated Notifications**, and **Agent Flows**, along with the **QA team**. I've the privilege of leading and mentoring a team of **10+ Individual Contributors**, ranging from entry-level professionals to team leads.
 
-      I've not only managed these **critical products** and teams but also **championed** a culture of innovation, **collaboration**, and **continuous improvement**.
     achievements:
       - item: The **Healthcare Experience Cloud** has been a cornerstone of our efforts, involving the seamless integration of healthcare call centers with unified patient information. This initiative has enabled more efficient and informed patient interactions.
       - item: The **Automated Notifications** has been instrumental in enhancing communication, focusing on the definition of rules and events to schedule and deliver notifications. These notifications are triggered by complex rules, ensuring timely and precise interactions with our clients.
@@ -78,14 +77,11 @@ professional:
     position: Researcher / HPC Software Engineer
     period: 2008 - 2016
     description: |
-      My role in the TPN laboratory was to develop a set of applications with **High-Performance Computing**. The languages I used were **C++/C**, **Python**, **MPI/sockets**, and **bash** in Linux and Windows environments. Other duties included testing and validation of numerical simulations, optimization, implementation of parallel improvements, and integration with other projects. 
-      I also worked on several other projects, including the first version of the **vessel maneuver simulator** called **SMH**, which was selected as a finalist for the **ANP (National Petroleum Agency)** [Prize Award for Technological Innovation in 2016](http://www.anp.gov.br/pesquisa-desenvolvimento-inovacao/302-premio-anp-de-inovacao-tecnologica/edicoes-anteriores/888-premio-anp-de-inovacao-tecnologica-2016).
+      In the TPN laboratory, I developed **High-Performance Computing** applications using **C++/C**, **Python**, **MPI/sockets**, and **bash** in Linux and Windows. I also handled testing, optimization, parallel improvements, and integration with other projects. Additionally, I contributed to the creation of **SMH**, a finalist for the [2016 ANP Prize Award for Technological Innovation](http://www.anp.gov.br/pesquisa-desenvolvimento-inovacao/302-premio-anp-de-inovacao-tecnologica/edicoes-anteriores/888-premio-anp-de-inovacao-tecnologica-2016).
 
     achievements:
       - item: Optimized parallel execution of the numerical solver in the cluster environment saving around **35% in resources** using my Ph.D. research;
-      - item: Minimized around **10% the time execution** in the standalone version of the numerical solver using OpenMP, and implemented a **cross compilation** in Windows and Linux environment with CMake;
-      - item: Reduced in order to **60% the storage space** with the output results of the application using a binary format;
-      - item: Introduced a **MPI communication** instead pure socket, providing more robustness in the communication channel;
+      - item: Achieved improvements in the Numerical Solver, reducing execution time by **10%** through the utilization of **OpenMP**, and implemented **MPI standards** in Parallel version;
       - item: Championed the use of *tests in development* flow to increase the development quality and built an initial **CI** with (CDash and CTest) to check the repository integrity.
 
   - company: Paulista University
