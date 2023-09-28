@@ -31,10 +31,10 @@ professional:
       I've overseen a broad portfolio, including products like **Healthcare Experience Cloud**, **Automated Notifications**, and **Agent Flows**, along with the **QA team**. I've the privilege of leading and mentoring a team of **10+ Individual Contributors**, ranging from entry-level professionals to team leads.
 
     achievements:
-      - item: The **Healthcare Experience Cloud** has been a cornerstone of our efforts, involving the seamless integration of healthcare call centers with unified patient information. This initiative has enabled more efficient and informed patient interactions.
-      - item: The **Automated Notifications** has been instrumental in enhancing communication, focusing on the definition of rules and events to schedule and deliver notifications. These notifications are triggered by complex rules, ensuring timely and precise interactions with our clients.
-      - item: The **Agent Flows** has revolutionized our customer support processes by empowering agents with scripted guidance during customer calls. This feature has significantly improved the efficiency and effectiveness of our support teams.
-      - item: The **QA team** under my guidance has been instrumental in maintaining and elevating the quality of our products. We have established a robust framework and procedures to rigorously validate product quality, ensuring that our solutions meet and exceed industry standards.
+      - item: The **Healthcare Experience Cloud** has been a cornerstone of our efforts, involving the seamless integration of healthcare call centers with more efficient and informed patient interactions;
+      - item: The **Automated Notifications** has been instrumental in enhancing communication, focusing on the definition of rules and events to schedule and deliver notifications, ensuring timely and precise interactions with the customers;
+      - item: The **Agent Flows** improved support processes by empowering agents with scripted guidance during customer calls;
+      - item: The **QA team** have established a robust E2E tests framework to rigorously validate product quality, ensuring that our solutions work properly in the Talkdesk environment.
 
   - company: Talkdesk
     position: Senior Software Engineer
@@ -64,15 +64,13 @@ professional:
     position: IT Manager
     period: 2016 - 2018
     description: |
-      Managed the team responsible for implementing new features in a vessel maneuver simulator for training activities called **Technomar Maritime Simulator (TMS)**. 
-      Launched the certification plan for **TMS** simulator by [DNV GL agency](https://www.dnvgl.com/) and collaborated in the core of the hydrodynamic numerical model applied in a "full bridge" simulator.
-      Cultivated good practices in software development processes, such as **Scrum/Kanban** board, **TDD**, **Git** adoption, and mentored meeting sessions to promote the homogenization of the team's knowledge.
+      I led a team in charge of implementing new features for the **Technomar Maritime Simulator** used in training activities. I initiated the certification plan with [DNV GL agency](https://www.dnvgl.com/) and contributed to the core of the hydrodynamic numerical model. Additionally, I fostered best practices in software development, including the use of **Scrum**, **Test-Driven Development**, **Git**, and conducted mentoring sessions to enhance team knowledge.
 
     achievements:
       - item: Enhanced in communication channel using the phonon framework, with gains in **15% speedup** and improve the code maintainability;
-      - item: Redesigned the database in MongoDB, with a **definition of a schema** to be use in DB, and implemented a unified access library to access the data;
-      - item: Orchestrated the **full delivery** of new simulation station at Technomar office, providing a simulator with 360 degrees immersion.
+      - item: Orchestrated the **full delivery** of new simulation station at Technomar office, providing a simulator with 360 degrees immersion;
       - item: Instituted **Gitlab** as tool to obtain code metrics, and manage the bugs, new features, backlog and milestone control for the team and the founders.
+
   - company: Numerical Offshore Tank
     position: Researcher / HPC Software Engineer
     period: 2008 - 2016
