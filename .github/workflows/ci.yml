@@ -1,28 +1,28 @@
----
-name: CI
-on: [push, pull_request]
-permissions:
-  contents: write
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v3
+# ---
+# name: CI
+# on: [push, pull_request]
+# permissions:
+#   contents: write
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout 🛎️
+#         uses: actions/checkout@v3
 
-      - name: Build 🔧
-        run: docker compose up cv
+#       - name: Build 🔧
+#         run: docker compose up cv
 
-      - name: test
-        run: ls -lhtr ./build
+#       - name: test
+#         run: ls -lhtr ./build
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          branch: gh-pages
-          folder: ./build
-          single-commit: true
-          clean: true
+#       - name: Deploy 🚀
+#         uses: JamesIves/github-pages-deploy-action@4.1.4
+#         with:
+#           branch: gh-pages
+#           folder: ./build
+#           single-commit: true
+#           clean: true
     # runs-on: ubuntu-latest
     # steps:
     #   - uses: actions/checkout@v2
