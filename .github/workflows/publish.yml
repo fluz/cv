@@ -25,8 +25,9 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
+          repository-name: fluz/fluz.github.io
           branch: gh-pages
           folder: build
           single-commit: true
           clean: true
-          github_token: ${{ secrests.PUBLISH_TO_GITHUBPAGES }}
+          token: ${{ secrets.PUBLISH_TO_GITHUBPAGES }}
