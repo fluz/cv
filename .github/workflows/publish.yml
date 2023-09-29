@@ -1,10 +1,10 @@
 ---
 name: Publish to fluz.github.io
 
-on:
-  push:
-    branches:
-      - main
+on: [push, pull_request]
+  # push:
+  #   branches:
+  #     - main
 
 permissions:
   contents: write
