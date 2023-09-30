@@ -6,6 +6,6 @@
 *.snm
 *.toc
 dist
-.vscode
+.vscode/
 build/
 .DS_Store
