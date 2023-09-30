@@ -1,4 +1,4 @@
-[![FLUZ](https://img.shields.io/circleci/build/github/fluz/cv?style=plastic&token=83c15bcb622cc21f3aaee690ade9c8cacc3cb466)](https://app.circleci.com/pipelines/github/fluz/cv?branch=master)
+![CV - Publish fluz.github.io](https://github.com/fluz/cv/actions/workflows/publish.yml/badge.svg)
 
 # Fernando Luz's CV
 
@@ -21,7 +21,7 @@ I keep my *Curriculum Vitae* using software development techniques, namely:
 
 - Maintain the source code in [github](https://github.com/fluz/cv).
 - Create different views for the same base [fluz.yml](https://github.com/fluz/cv/fluz.yml)
-- Use automated deploy with CircleCI.
+- Use automated deploy with Github Actions.
 
 ## To do
 
