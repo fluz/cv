@@ -1,5 +1,5 @@
 ---
-name: Publish to fluz.github.io
+name: Publish to fluz.github.io/cv
 
 on: [push, pull_request]
 
@@ -22,9 +22,9 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          repository-name: fluz/fluz.github.io
           branch: gh-pages
           folder: build
+          target-folder: .
           single-commit: true
           clean: true
-          token: ${{ secrets.PUBLISH_TO_GITHUBPAGES }}
+
