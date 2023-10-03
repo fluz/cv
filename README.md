@@ -1,10 +1,11 @@
-![CV - Publish fluz.github.io](https://github.com/fluz/cv/actions/workflows/publish.yml/badge.svg)
+![CV - Publish fluz.github.io/cv (stg)](https://github.com/fluz/cv/actions/workflows/publish_cv.yml/badge.svg) ![CV - Publish fluz.github.io (prd)](https://github.com/fluz/cv/actions/workflows/publish_github-io.yml/badge.svg)
+
 
 # Fernando Luz's CV
 
 ## CV formats
 
-My CV is available in the following formats, or layouts:
+My CV is available in the following formats and layouts:
 
 ### Current views
 
