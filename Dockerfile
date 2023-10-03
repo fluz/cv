@@ -6,10 +6,12 @@ RUN set -e -x; \
     apt-get update; \
     apt-get install -y --no-install-recommends \
         openjdk-17-jre \
-        pandoc \
-        texlive texlive-latex-extra texlive-plain-generic texlive-latex-recommended cm-super \
-        python3-yaml python3-jinja2 \
-        locales inkscape
+        pandoc=2.9.2.1-1 ninja-build=1.10.1-1 \
+        texlive=2020.20210202-3 texlive-latex-extra=2020.20210202-3 texlive-plain-generic=2020.20210202-3 texlive-latex-recommended=2020.20210202-3 cm-super=0.3.4-15 \
+        python3-yaml=5.3.1-5 python3-jinja2=2.11.3-1 \
+        locales=2.31-13+deb11u6 inkscape=1.0.2-4; \
+    apt-get clean; \
+    rm -rf /var/lib/apt/lists/*
 
 # setup su and locale
 RUN set -e -x; \
@@ -22,34 +24,6 @@ RUN ["mkdir", "${APP_HOME}"]
 
 WORKDIR ${APP_HOME}
 
-COPY . ${APP_HOME}
-
-# RUN ./gradlew tasks cvAll
-# [END -   building phase]
-
-
-
-# # install debian packages:
-# ENV DEBIAN_FRONTEND=noninteractive
-
-
-# # copy host to docker
-# RUN ["mkdir", "${APP_HOME}"]
-# WORKDIR ${APP_HOME}
-
-# # COPY build.ninja ${APP_HOME}
-# COPY gradlew ${APP_HOME}
-# COPY gradle ${APP_HOME}/gradle
-# COPY build.gradle.kts ${APP_HOME}
-# COPY settings.gradle.kts ${APP_HOME}
-# # COPY README.md ${APP_HOME}
-# COPY fluz.yml ${APP_HOME}
-# # COPY build_cv.sh ${APP_HOME}
-# COPY assets ${APP_HOME}/assets
-# COPY moderncvclassic ${APP_HOME}/moderncvclassic
-# COPY ceevee ${APP_HOME}/ceevee
-# COPY markdown ${APP_HOME}/markdown
-# COPY tools ${APP_HOME}/tools
-# COPY DevResume ${APP_HOME}/DevResume
-# COPY pandoc-bootstrap ${APP_HOME}/pandoc-bootstrap
-# COPY europasscv ${APP_HOME}/europasscv
+COPY src ${APP_HOME}
+COPY tools ${APP_HOME}
+# COPY README.md ${APP_HOME}
