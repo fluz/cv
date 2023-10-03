@@ -1,4 +1,4 @@
-![CV - Publish fluz.github.io/cv (stg)](https://github.com/fluz/cv/actions/workflows/publish_cv.yml/badge.svg) ![CV - Publish fluz.github.io (prd)](https://github.com/fluz/cv/actions/workflows/publish_github-io.yml/badge.svg)
+![CV - Publish fluz.github.io/cv - STG](https://github.com/fluz/cv/actions/workflows/publish_cv.yml/badge.svg) ![CV - Publish fluz.github.io - PRD](https://github.com/fluz/cv/actions/workflows/publish_github-io.yml/badge.svg)
 
 
 # Fernando Luz's CV
