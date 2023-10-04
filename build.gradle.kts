@@ -36,7 +36,7 @@ tasks.register<Exec>("MarkdownHtml") {
 
 tasks.register<Exec>("MarkdownTxt") {
     logger.info("Generating Markdown TXT CV version")
-    dependsOn("Markdown")
+    dependsOn("Markdown CV Text version")
 
     commandLine("pandoc", "-f", "markdown", "-t", "plain", 
                 "-V", "'title:Fernando Luz'", "-s", 
