@@ -4,10 +4,8 @@
  * This is a general purpose Gradle build.
  * To learn more about Gradle by exploring our Samples at https://docs.gradle.org/8.3/samples
  */
-// val input_cv = "fluz.yml"
 
 import java.nio.file.Files
-
 
 tasks.register<Exec>("Markdown") {
     logger.info("Generating Markdown CV version")
@@ -57,4 +55,19 @@ tasks.register<Exec>("EuropassPdf") {
 
     commandLine("cp", "europasscv/europasscv.cls", "build/europasscv/europasscv.cls")
     commandLine("./tools/cddo", "build/europasscv/cv.tex", "${project.rootDir}/tools/latexer")
+}
+
+tasks.register<Exec>("DevResume") {
+    logger.info("Generating DevResume")
+
+    // Store target directory into a variable to avoid project reference in the configuration cache
+    val directory = file("build/DevResume")
+
+    doFirst {
+        Files.createDirectories(directory.toPath())
+    }
+    commandLine("./tools/jinja2-render", "-y", "fluz.yml",
+                "-o", "build/DevResume/index.html", 
+                "DevResume/cv.html.jinja")
+
 }
