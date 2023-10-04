@@ -7,8 +7,9 @@
 
 import java.nio.file.Files
 
-tasks.register<Exec>("Markdown") {
+tasks.register<Exec>("genMarkdown") {
     logger.info("Generating Markdown CV version")
+    group = "CV generation"
     description = "Generates Markdown CV version."
 
     // Store target directory into a variable to avoid project reference in the configuration cache
@@ -23,10 +24,11 @@ tasks.register<Exec>("Markdown") {
                 )
 }
 
-tasks.register<Exec>("MarkdownHtml") {
+tasks.register<Exec>("genMarkdownHtml") {
     logger.info("Generating Markdown HTML CV version")
+    group = "CV generation"
     description = "Generates Markdown HTML CV version."
-    dependsOn("Markdown")
+    dependsOn("genMarkdown")
 
     commandLine("pandoc", "-f", "markdown", "-t", "html", 
                 "--metadata", "title='Fernando Luz'", "-s", 
@@ -36,10 +38,11 @@ tasks.register<Exec>("MarkdownHtml") {
 
 }
 
-tasks.register<Exec>("MarkdownTxt") {
+tasks.register<Exec>("genMarkdownTxt") {
     logger.info("Generating Markdown TXT CV version")
+    group = "CV generation"
     description = "Generates Markdown TXT CV version."
-    dependsOn("Markdown")
+    dependsOn("genMarkdown")
 
     commandLine("pandoc", "-f", "markdown", "-t", "plain", 
                 "-V", "'title:Fernando Luz'", "-s", 
@@ -48,8 +51,9 @@ tasks.register<Exec>("MarkdownTxt") {
 
 }
 
-tasks.register<Exec>("EuropassTex") {
+tasks.register<Exec>("_europassTex") {
     logger.info("Generation Europass CV [tex]")
+    group = "CV helper"
     description = "Generates Europass LaTex CV version."
 
     // Store target directory into a variable to avoid project reference in the configuration cache
@@ -64,18 +68,27 @@ tasks.register<Exec>("EuropassTex") {
 
 }
 
-tasks.register<Exec>("EuropassPdf") {
+tasks.register<Copy>("_copyEuropassCls") {
     logger.info("Generation Europass CV [pdf]")
-    description = "Generates Europass Pdf CV version."
-    dependsOn("EuropassTex")
+    group = "CV helper"
+    description = "copy necessary files to compile Europass CV Pdf"
 
-    commandLine("cp", "europasscv/europasscv.cls", "build/europasscv/europasscv.cls")
-    commandLine("./tools/cddo", "build/europasscv/cv.tex", "${project.rootDir}/tools/latexer")
-
+    from(file("europasscv/europasscv.cls"))
+    into("build/europasscv/europasscv.cls")
 }
 
-tasks.register<Exec>("DevResume") {
+tasks.register<Exec>("genEuropassPdf") {
+    logger.info("Generation Europass CV [pdf]")
+    group = "CV generation"
+    description = "Generates Europass Pdf CV version."
+    dependsOn("_europassTex","_copyEuropassCls")
+
+    commandLine("./tools/cddo", "build/europasscv/cv.tex", "${project.rootDir}/tools/latexer")
+}
+
+tasks.register<Exec>("genDevResume") {
     logger.info("Generating DevResume")
+    group = "CV generation"
     description = "Generates DevResume CV version."
 
     // Store target directory into a variable to avoid project reference in the configuration cache
@@ -89,8 +102,9 @@ tasks.register<Exec>("DevResume") {
                 "DevResume/cv.html.jinja")
 }
 
-tasks.register<Exec>("CeeVee") {
+tasks.register<Exec>("genCeeVee") {
     logger.info("Generating CeeVee")
+    group = "CV generation"
     description = "Generates CeeVee CV version."
 
     // Store target directory into a variable to avoid project reference in the configuration cache
@@ -104,8 +118,9 @@ tasks.register<Exec>("CeeVee") {
                 "ceevee/cv.html.jinja")
 }
 
-tasks.register<Exec>("ModernCVClassicTex") {
+tasks.register<Exec>("_modernCVClassicTex") {
     logger.info("Generating Modern CV Classic")
+    group = "CV helper"
     description = "Generates Modern CV Classic LaTex version."
 
     // Store target directory into a variable to avoid project reference in the configuration cache
@@ -120,13 +135,22 @@ tasks.register<Exec>("ModernCVClassicTex") {
 
 }
 
-tasks.register<Exec>("ModernCVClassicPdf") {
+tasks.register<Exec>("genModernCVClassicPdf") {
     logger.info("Generation Modern CV Classic [pdf]")
+    group = "CV generation"
     description = "Generates Modern CV Classic Pdf version."
 
-    dependsOn("ModernCVClassicTex")
+    dependsOn("_modernCVClassicTex")
 
-    // commandLine("cp", "europasscv/europasscv.cls", "build/europasscv/europasscv.cls")
     commandLine("./tools/cddo", "build/moderncvclassic/cv.tex", "${project.rootDir}/tools/latexer")
 }
 
+tasks.register("cvAll") {
+    logger.info("Generation All versions")
+    group = "CV generation"
+    description = "Generates all versions."
+
+    dependsOn(provider {
+        tasks.filter { task -> task.name.startsWith("gen") }
+    })
+}
