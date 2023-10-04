@@ -8,19 +8,32 @@
 
 import java.nio.file.Files
 
-tasks.register<Exec>("MarkdownHtml") {
-    logger.info("Generating Markdown HTML CV version")
-    commandLine("pandoc", "-f markdown", "-t html", "--metadata", "title='Fernando Luz'", "-s", 
-                "--template", "pandoc-bootstrap/template.html", "--css", "pandoc-bootstrap/template.css",
-                "-o", "build/markdown/cv.html", "build/markdown/cv.md"
-                )
-}
 
 tasks.register<Exec>("Markdown") {
     logger.info("Generating Markdown CV version")
+
+    // Store target directory into a variable to avoid project reference in the configuration cache
+    val directory = file("build/markdown")
+
+    doFirst {
+        Files.createDirectories(directory.toPath())
+    }
     commandLine("./tools/jinja2-render", "-y", "fluz.yml",
-                "-o", "build/markdown/cv.md", "markdown/cv.md.jinja"
+                "-o", "build/markdown/cv.md", 
+                "markdown/cv.md.jinja"
                 )
+}
+
+tasks.register<Exec>("MarkdownHtml") {
+    logger.info("Generating Markdown HTML CV version")
+    dependsOn("Markdown")
+
+    commandLine("pandoc", "-f", "markdown", "-t", "html", 
+                "--metadata", "title='Fernando Luz'", "-s", 
+                "--template", "pandoc-bootstrap/template.html", "--css", "pandoc-bootstrap/template.css",
+                "-o", "build/markdown/cv.html", 
+                "build/markdown/cv.md")
+
 }
 
 tasks.register<Exec>("EuropassTex") {
@@ -32,7 +45,9 @@ tasks.register<Exec>("EuropassTex") {
     doFirst {
         Files.createDirectories(directory.toPath())
     }
-    commandLine("./tools/jinja2-render", "-y", "fluz.yml", "-o", "build/europasscv/cv.tex", "europasscv/cv.tex.jinja")
+    commandLine("./tools/jinja2-render", "-y", "fluz.yml", 
+                "-o", "build/europasscv/cv.tex", 
+                "europasscv/cv.tex.jinja")
 
 }
 
