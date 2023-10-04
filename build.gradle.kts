@@ -9,7 +9,7 @@ import java.nio.file.Files
 
 tasks.register<Exec>("Markdown") {
     logger.info("Generating Markdown CV version")
-    
+    description = "Generates Markdown CV version."
 
     // Store target directory into a variable to avoid project reference in the configuration cache
     val directory = file("build/markdown")
@@ -25,6 +25,7 @@ tasks.register<Exec>("Markdown") {
 
 tasks.register<Exec>("MarkdownHtml") {
     logger.info("Generating Markdown HTML CV version")
+    description = "Generates Markdown HTML CV version."
     dependsOn("Markdown")
 
     commandLine("pandoc", "-f", "markdown", "-t", "html", 
@@ -37,6 +38,7 @@ tasks.register<Exec>("MarkdownHtml") {
 
 tasks.register<Exec>("MarkdownTxt") {
     logger.info("Generating Markdown TXT CV version")
+    description = "Generates Markdown TXT CV version."
     dependsOn("Markdown")
 
     commandLine("pandoc", "-f", "markdown", "-t", "plain", 
@@ -48,6 +50,7 @@ tasks.register<Exec>("MarkdownTxt") {
 
 tasks.register<Exec>("EuropassTex") {
     logger.info("Generation Europass CV [tex]")
+    description = "Generates Europass LaTex CV version."
 
     // Store target directory into a variable to avoid project reference in the configuration cache
     val directory = file("build/europasscv")
@@ -63,6 +66,7 @@ tasks.register<Exec>("EuropassTex") {
 
 tasks.register<Exec>("EuropassPdf") {
     logger.info("Generation Europass CV [pdf]")
+    description = "Generates Europass Pdf CV version."
     dependsOn("EuropassTex")
 
     commandLine("cp", "europasscv/europasscv.cls", "build/europasscv/europasscv.cls")
@@ -72,6 +76,7 @@ tasks.register<Exec>("EuropassPdf") {
 
 tasks.register<Exec>("DevResume") {
     logger.info("Generating DevResume")
+    description = "Generates DevResume CV version."
 
     // Store target directory into a variable to avoid project reference in the configuration cache
     val directory = file("build/DevResume")
@@ -86,6 +91,7 @@ tasks.register<Exec>("DevResume") {
 
 tasks.register<Exec>("CeeVee") {
     logger.info("Generating CeeVee")
+    description = "Generates CeeVee CV version."
 
     // Store target directory into a variable to avoid project reference in the configuration cache
     val directory = file("build/ceevee")
@@ -100,6 +106,7 @@ tasks.register<Exec>("CeeVee") {
 
 tasks.register<Exec>("ModernCVClassicTex") {
     logger.info("Generating Modern CV Classic")
+    description = "Generates Modern CV Classic LaTex version."
 
     // Store target directory into a variable to avoid project reference in the configuration cache
     val directory = file("build/moderncvclassic")
@@ -115,6 +122,8 @@ tasks.register<Exec>("ModernCVClassicTex") {
 
 tasks.register<Exec>("ModernCVClassicPdf") {
     logger.info("Generation Modern CV Classic [pdf]")
+    description = "Generates Modern CV Classic Pdf version."
+
     dependsOn("ModernCVClassicTex")
 
     // commandLine("cp", "europasscv/europasscv.cls", "build/europasscv/europasscv.cls")
