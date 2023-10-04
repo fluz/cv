@@ -34,6 +34,17 @@ tasks.register<Exec>("MarkdownHtml") {
 
 }
 
+tasks.register<Exec>("MarkdownTxt") {
+    logger.info("Generating Markdown TXT CV version")
+    dependsOn("Markdown")
+
+    commandLine("pandoc", "-f", "markdown", "-t", "plain", 
+                "-V", "'title:Fernando Luz'", "-s", 
+                "-o", "build/markdown/cv.txt", 
+                "build/markdown/cv.md")
+
+}
+
 tasks.register<Exec>("EuropassTex") {
     logger.info("Generation Europass CV [tex]")
 
@@ -87,8 +98,8 @@ tasks.register<Exec>("CeeVee") {
 
 }
 
-tasks.register<Exec>("ModernCvClassic") {
-    logger.info("Generating ModernCvClassic")
+tasks.register<Exec>("ModernCVClassicTex") {
+    logger.info("Generating Modern CV Classic")
 
     // Store target directory into a variable to avoid project reference in the configuration cache
     val directory = file("build/moderncvclassic")
@@ -100,5 +111,13 @@ tasks.register<Exec>("ModernCvClassic") {
                 "-o", "build/moderncvclassic/cv.tex", 
                 "moderncvclassic/cv.tex.jinja")
 
+}
+
+tasks.register<Exec>("ModernCVClassicPdf") {
+    logger.info("Generation Modern CV Classic [pdf]")
+    dependsOn("ModernCVClassicTex")
+
+    // commandLine("cp", "europasscv/europasscv.cls", "build/europasscv/europasscv.cls")
+    commandLine("./tools/cddo", "build/moderncvclassic/cv.tex", "${project.rootDir}/tools/latexer")
 }
 
