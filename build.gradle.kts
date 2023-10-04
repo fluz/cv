@@ -86,3 +86,19 @@ tasks.register<Exec>("CeeVee") {
                 "ceevee/cv.html.jinja")
 
 }
+
+tasks.register<Exec>("ModernCvClassic") {
+    logger.info("Generating ModernCvClassic")
+
+    // Store target directory into a variable to avoid project reference in the configuration cache
+    val directory = file("build/moderncvclassic")
+
+    doFirst {
+        Files.createDirectories(directory.toPath())
+    }
+    commandLine("./tools/jinja2-render", "-y", "fluz.yml",
+                "-o", "build/moderncvclassic/cv.tex", 
+                "moderncvclassic/cv.tex.jinja")
+
+}
+
