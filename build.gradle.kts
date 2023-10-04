@@ -4,3 +4,42 @@
  * This is a general purpose Gradle build.
  * To learn more about Gradle by exploring our Samples at https://docs.gradle.org/8.3/samples
  */
+// val input_cv = "fluz.yml"
+
+import java.nio.file.Files
+
+tasks.register<Exec>("MarkdownHtml") {
+    logger.info("Generating Markdown HTML CV version")
+    commandLine("pandoc", "-f markdown", "-t html", "--metadata", "title='Fernando Luz'", "-s", 
+                "--template", "pandoc-bootstrap/template.html", "--css", "pandoc-bootstrap/template.css",
+                "-o", "build/markdown/cv.html", "build/markdown/cv.md"
+                )
+}
+
+tasks.register<Exec>("Markdown") {
+    logger.info("Generating Markdown CV version")
+    commandLine("./tools/jinja2-render", "-y", "fluz.yml",
+                "-o", "build/markdown/cv.md", "markdown/cv.md.jinja"
+                )
+}
+
+tasks.register<Exec>("EuropassTex") {
+    logger.info("Generation Europass CV [tex]")
+
+    // Store target directory into a variable to avoid project reference in the configuration cache
+    val directory = file("build/europasscv")
+
+    doFirst {
+        Files.createDirectories(directory.toPath())
+    }
+    commandLine("./tools/jinja2-render", "-y", "fluz.yml", "-o", "build/europasscv/cv.tex", "europasscv/cv.tex.jinja")
+
+}
+
+tasks.register<Exec>("EuropassPdf") {
+    logger.info("Generation Europass CV [pdf]")
+    dependsOn("EuropassTex")
+
+    commandLine("cp", "europasscv/europasscv.cls", "build/europasscv/europasscv.cls")
+    commandLine("./tools/cddo", "build/europasscv/cv.tex", "${project.rootDir}/tools/latexer")
+}
