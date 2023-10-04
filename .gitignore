@@ -9,6 +9,7 @@ dist
 .vscode/
 build/
 .DS_Store
+.ninja_log
 
 # Ignore Gradle project-specific cache directory
 .gradle
