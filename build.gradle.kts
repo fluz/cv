@@ -71,3 +71,18 @@ tasks.register<Exec>("DevResume") {
                 "DevResume/cv.html.jinja")
 
 }
+
+tasks.register<Exec>("CeeVee") {
+    logger.info("Generating CeeVee")
+
+    // Store target directory into a variable to avoid project reference in the configuration cache
+    val directory = file("build/ceevee")
+
+    doFirst {
+        Files.createDirectories(directory.toPath())
+    }
+    commandLine("./tools/jinja2-render", "-y", "fluz.yml",
+                "-o", "build/ceevee/index.html", 
+                "ceevee/cv.html.jinja")
+
+}
