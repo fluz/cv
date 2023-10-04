@@ -9,6 +9,7 @@ import java.nio.file.Files
 
 tasks.register<Exec>("Markdown") {
     logger.info("Generating Markdown CV version")
+    
 
     // Store target directory into a variable to avoid project reference in the configuration cache
     val directory = file("build/markdown")
@@ -36,7 +37,7 @@ tasks.register<Exec>("MarkdownHtml") {
 
 tasks.register<Exec>("MarkdownTxt") {
     logger.info("Generating Markdown TXT CV version")
-    dependsOn("Markdown CV Text version")
+    dependsOn("Markdown")
 
     commandLine("pandoc", "-f", "markdown", "-t", "plain", 
                 "-V", "'title:Fernando Luz'", "-s", 
@@ -66,6 +67,7 @@ tasks.register<Exec>("EuropassPdf") {
 
     commandLine("cp", "europasscv/europasscv.cls", "build/europasscv/europasscv.cls")
     commandLine("./tools/cddo", "build/europasscv/cv.tex", "${project.rootDir}/tools/latexer")
+
 }
 
 tasks.register<Exec>("DevResume") {
@@ -80,7 +82,6 @@ tasks.register<Exec>("DevResume") {
     commandLine("./tools/jinja2-render", "-y", "fluz.yml",
                 "-o", "build/DevResume/index.html", 
                 "DevResume/cv.html.jinja")
-
 }
 
 tasks.register<Exec>("CeeVee") {
@@ -95,7 +96,6 @@ tasks.register<Exec>("CeeVee") {
     commandLine("./tools/jinja2-render", "-y", "fluz.yml",
                 "-o", "build/ceevee/index.html", 
                 "ceevee/cv.html.jinja")
-
 }
 
 tasks.register<Exec>("ModernCVClassicTex") {
