@@ -86,10 +86,20 @@ tasks.register<Exec>("genEuropassPdf") {
     commandLine("./tools/cddo", "build/europasscv/cv.tex", "${project.rootDir}/tools/latexer")
 }
 
+tasks.register<Copy>("_copyDevResumeAssets") {
+    logger.info("Helper function to DevResume")
+    group = "CV helper"
+    description = "copy necessary files execute DevResume view"
+
+    from(file("Assets"))
+    into("build/Assets")
+}
+
 tasks.register<Exec>("genDevResume") {
     logger.info("Generating DevResume")
     group = "CV generation"
     description = "Generates DevResume CV version."
+    dependsOn("_copyDevResumeAssets")
 
     // Store target directory into a variable to avoid project reference in the configuration cache
     val directory = file("build/DevResume")
