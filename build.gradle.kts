@@ -7,6 +7,8 @@
 
 import java.nio.file.Files
 
+val INPUT_CV_FILE = "src/fluz.yml"
+
 tasks.register<Exec>("genMarkdown") {
     logger.info("Generating Markdown CV version")
     group = "CV generation"
@@ -18,9 +20,9 @@ tasks.register<Exec>("genMarkdown") {
     doFirst {
         Files.createDirectories(directory.toPath())
     }
-    commandLine("./tools/jinja2-render", "-y", "fluz.yml",
+    commandLine("./tools/jinja2-render", "-y", INPUT_CV_FILE,
                 "-o", "build/markdown/cv.md", 
-                "markdown/cv.md.jinja"
+                "src/views/markdown/cv.md.jinja"
                 )
 }
 
@@ -32,7 +34,7 @@ tasks.register<Exec>("genMarkdownHtml") {
 
     commandLine("pandoc", "-f", "markdown", "-t", "html", 
                 "--metadata", "title='Fernando Luz'", "-s", 
-                "--template", "pandoc-bootstrap/template.html", "--css", "pandoc-bootstrap/template.css",
+                "--template", "src/views/pandoc-bootstrap/template.html", "--css", "src/views/pandoc-bootstrap/template.css",
                 "-o", "build/markdown/cv.html", 
                 "build/markdown/cv.md")
 
@@ -62,9 +64,9 @@ tasks.register<Exec>("_europassTex") {
     doFirst {
         Files.createDirectories(directory.toPath())
     }
-    commandLine("./tools/jinja2-render", "-y", "fluz.yml", 
+    commandLine("./tools/jinja2-render", "-y", INPUT_CV_FILE, 
                 "-o", "build/europasscv/cv.tex", 
-                "europasscv/cv.tex.jinja")
+                "src/views/europasscv/cv.tex.jinja")
 
 }
 
@@ -91,8 +93,8 @@ tasks.register<Copy>("_copyDevResumeAssets") {
     group = "CV helper"
     description = "copy necessary files execute DevResume view"
 
-    from(file("Assets"))
-    into("build/Assets")
+    from(file("src/views/assets"))
+    into("build/src/assets")
 }
 
 tasks.register<Exec>("genDevResume") {
@@ -107,9 +109,9 @@ tasks.register<Exec>("genDevResume") {
     doFirst {
         Files.createDirectories(directory.toPath())
     }
-    commandLine("./tools/jinja2-render", "-y", "fluz.yml",
+    commandLine("./tools/jinja2-render", "-y", INPUT_CV_FILE,
                 "-o", "build/DevResume/index.html", 
-                "DevResume/cv.html.jinja")
+                "src/views/DevResume/cv.html.jinja")
 }
 
 tasks.register<Exec>("genCeeVee") {
@@ -123,9 +125,9 @@ tasks.register<Exec>("genCeeVee") {
     doFirst {
         Files.createDirectories(directory.toPath())
     }
-    commandLine("./tools/jinja2-render", "-y", "fluz.yml",
+    commandLine("./tools/jinja2-render", "-y", INPUT_CV_FILE,
                 "-o", "build/ceevee/index.html", 
-                "ceevee/cv.html.jinja")
+                "src/views/ceevee/cv.html.jinja")
 }
 
 tasks.register<Exec>("_modernCVClassicTex") {
@@ -139,9 +141,9 @@ tasks.register<Exec>("_modernCVClassicTex") {
     doFirst {
         Files.createDirectories(directory.toPath())
     }
-    commandLine("./tools/jinja2-render", "-y", "fluz.yml",
+    commandLine("./tools/jinja2-render", "-y", INPUT_CV_FILE,
                 "-o", "build/moderncvclassic/cv.tex", 
-                "moderncvclassic/cv.tex.jinja")
+                "src/views/moderncvclassic/cv.tex.jinja")
 
 }
 
