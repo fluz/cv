@@ -3,8 +3,7 @@ services:
   cv:
     build: .
     command: >
-      sh -cx "ninja -v
-      && cp -r ./assets ./build/assets
+      sh -cx "./gradlew tasks cvAll
       && cp ./build/DevResume/index.html ./build/index.html
       && sed -i 's|\\.\\./|\\./|g' ./build/index.html"
     volumes:
