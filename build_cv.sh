@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # generate cv view's
-ninja -v
+./gradlew tasks cvAll
 
 # copy assets to build file
 cp -r ./assets ./build/assets

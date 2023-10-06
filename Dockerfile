@@ -1,12 +1,12 @@
+# [START - building phase]
 FROM debian:bullseye
 LABEL maintainer="Fernando Luz <prof.fernando.luz@gmail.com>"
 
-# install debian packages:
-ENV DEBIAN_FRONTEND=noninteractive
 RUN set -e -x; \
     apt-get update; \
     apt-get install -y --no-install-recommends \
-        pandoc ninja-build \
+        openjdk-17-jre \
+        pandoc \
         texlive texlive-latex-extra texlive-plain-generic texlive-latex-recommended cm-super \
         python3-yaml python3-jinja2 \
         locales inkscape
@@ -17,20 +17,39 @@ RUN set -e -x; \
     echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen; locale-gen
 ENV LC_ALL=en_US.UTF-8
 
-# copy host to docker
 ENV APP_HOME=/app
 RUN ["mkdir", "${APP_HOME}"]
+
 WORKDIR ${APP_HOME}
 
-COPY build.ninja ${APP_HOME}
-COPY README.md ${APP_HOME}
-COPY fluz.yml ${APP_HOME}
-COPY build_cv.sh ${APP_HOME}
-COPY assets ${APP_HOME}/assets
-COPY moderncvclassic ${APP_HOME}/moderncvclassic
-COPY ceevee ${APP_HOME}/ceevee
-COPY markdown ${APP_HOME}/markdown
-COPY tools ${APP_HOME}/tools
-COPY DevResume ${APP_HOME}/DevResume
-COPY pandoc-bootstrap ${APP_HOME}/pandoc-bootstrap
-COPY europasscv ${APP_HOME}/europasscv
+COPY . ${APP_HOME}
+
+# RUN ./gradlew tasks cvAll
+# [END -   building phase]
+
+
+
+# # install debian packages:
+# ENV DEBIAN_FRONTEND=noninteractive
+
+
+# # copy host to docker
+# RUN ["mkdir", "${APP_HOME}"]
+# WORKDIR ${APP_HOME}
+
+# # COPY build.ninja ${APP_HOME}
+# COPY gradlew ${APP_HOME}
+# COPY gradle ${APP_HOME}/gradle
+# COPY build.gradle.kts ${APP_HOME}
+# COPY settings.gradle.kts ${APP_HOME}
+# # COPY README.md ${APP_HOME}
+# COPY fluz.yml ${APP_HOME}
+# # COPY build_cv.sh ${APP_HOME}
+# COPY assets ${APP_HOME}/assets
+# COPY moderncvclassic ${APP_HOME}/moderncvclassic
+# COPY ceevee ${APP_HOME}/ceevee
+# COPY markdown ${APP_HOME}/markdown
+# COPY tools ${APP_HOME}/tools
+# COPY DevResume ${APP_HOME}/DevResume
+# COPY pandoc-bootstrap ${APP_HOME}/pandoc-bootstrap
+# COPY europasscv ${APP_HOME}/europasscv
