@@ -75,8 +75,8 @@ tasks.register<Copy>("_copyEuropassCls") {
     group = "CV helper"
     description = "copy necessary files to compile Europass CV Pdf"
 
-    from(file("europasscv/europasscv.cls"))
-    into("build/europasscv/europasscv.cls")
+    from(file("src/views/europasscv/europasscv.cls"))
+    into("build/europasscv")
 }
 
 tasks.register<Exec>("genEuropassPdf") {
@@ -94,7 +94,7 @@ tasks.register<Copy>("_copyDevResumeAssets") {
     description = "copy necessary files execute DevResume view"
 
     from(file("src/views/assets"))
-    into("build/src/assets")
+    into("build/assets")
 }
 
 tasks.register<Exec>("genDevResume") {
@@ -130,7 +130,8 @@ tasks.register<Exec>("genCeeVee") {
                 "src/views/ceevee/cv.html.jinja")
 }
 
-tasks.register<Exec>("_modernCVClassicTex") {
+// Need to validate the fonts issue in dockerfile (consider to remove fontawesome5.sty dependency)
+tasks.register<Exec>("x_modernCVClassicTex") {
     logger.info("Generating Modern CV Classic")
     group = "CV helper"
     description = "Generates Modern CV Classic LaTex version."
@@ -147,7 +148,8 @@ tasks.register<Exec>("_modernCVClassicTex") {
 
 }
 
-tasks.register<Exec>("genModernCVClassicPdf") {
+// Need to validate the fonts issue in dockerfile (consider to remove fontawesome5.sty dependency)
+tasks.register<Exec>("xgenModernCVClassicPdf") {
     logger.info("Generation Modern CV Classic [pdf]")
     group = "CV generation"
     description = "Generates Modern CV Classic Pdf version."
