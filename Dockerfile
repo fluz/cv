@@ -21,10 +21,10 @@ RUN ["mkdir", "${APP_HOME}"]
 
 WORKDIR ${APP_HOME}
 
-COPY gradlew ${APP_HOME}
 COPY gradle ${APP_HOME}/gradle
+COPY gradlew ${APP_HOME}
 COPY build.gradle.kts ${APP_HOME}
 COPY settings.gradle.kts ${APP_HOME}
-COPY src ${APP_HOME}/src
-COPY tools ${APP_HOME}/tools
 COPY README.md ${APP_HOME}
+COPY tools ${APP_HOME}/tools
+COPY src ${APP_HOME}/src
